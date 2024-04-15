@@ -1,0 +1,62 @@
+---
+version: '3'
+dotenv:
+  - ".env"
+  - ".env.secret"
+
+vars:
+  PLUG_DIR:
+    sh: "echo $(cd {{.PLUG_DIR}} && pwd)"
+  DS_DIR:
+    sh: "echo $(cd {{.DS_DIR}} && pwd)"
+  DS:
+    sh: "echo 'node $(cd {{.DS_DIR}} && pwd)/cli/dist/ds.js'"
+  # The default  here is the foundry mnemonic derived private key
+  DEPLOYER_KEY: "0x6335c92c05660f35b36148bbfb2105a68dd40275ebf16eff9524d487fb5d57a8"
+  # If pub is not provided, KEY must be
+  DEPLOYER_PUB: ""
+  RPC_URL: "http://localhost:8545"
+
+  PLAYER_KEY: "0x6335c92c05660f35b36148bbfb2105a68dd40275ebf16eff9524d487fb5d57a8"
+  PLAYER_PUB: ""
+
+tasks:
+
+  apply:
+    cmds:
+      - |
+        cd {{.PLUG_DIR}}
+        node {{.DS_DIR}}/cli/dist/ds.js \
+          apply -z 1 -n local \
+          -k 0x6335c92c05660f35b36148bbfb2105a68dd40275ebf16eff9524d487fb5d57a8 -R -f .
+
+  zone-contract:
+    desc: "get the address of the Zone NFT contract"
+    cmds:
+      - |
+        DEPLOYER=$(node scripts/pub.js "{{.DEPLOYER_KEY}}")
+        node scripts/findcontract.js {{.RPC_URL}} $DEPLOYER "721"
+
+  contracts:deployed:
+    desc: "exec into the contracts container and cat latest.json"
+    cmds:
+      - docker container exec -it ds-contracts-1 cat /contracts/out/latest.json
+  contracts:cp:
+    desc: "copy the contracts directory from the running container to {{.ROOT_DIR}}/ds/contracts"
+    cmds:
+      - docker cp ds-contracts-1:/contracts ds/
+
+
+  
+
+
+
+  build:ds-cli:
+    desc: "build ds cli"
+    cmds:
+      - |
+        cd '{{.DS_DIR}}/cli'
+        pwd
+        npm run build
+
+
