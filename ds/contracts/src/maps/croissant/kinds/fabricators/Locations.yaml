@@ -1,0 +1,11 @@
+---
+kind: Building
+spec:
+  name: Litora
+  location: [6, -1, -5]
+
+---
+kind: Building
+spec:
+  name: Apex
+  location: [0, 4, -4]

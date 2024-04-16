@@ -1,0 +1,33 @@
+---
+kind: Building
+spec:
+  name: Iron Shrine
+  location:
+    - 7
+    - -16
+    - 9
+
+---
+kind: Building
+spec:
+  name: Iron Gate
+  location:
+    - 12
+    - -16
+    - 4
+  facingDirection: LEFT
+
+---
+kind: Bag
+spec:
+  location:
+    - 7
+    - -15
+    - 8
+  items: []
+
+---
+kind: Building
+spec:
+  name: Reset Tower
+  location: [7, -14, 7]

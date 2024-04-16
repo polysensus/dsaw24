@@ -1,0 +1,9 @@
+kind: Item
+spec:
+  name: Deletion Tool
+  icon: 07-39
+  goo:
+    red: 50
+    green: 25
+    blue: 25
+  stackable: false

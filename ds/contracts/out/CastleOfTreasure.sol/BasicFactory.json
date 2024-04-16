@@ -1,0 +1,953 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract Game",
+          "name": "ds",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "buildingInstanceID",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "mobileUnitID",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes",
+          "name": "payload",
+          "type": "bytes"
+        }
+      ],
+      "name": "construct",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract Game",
+          "name": "ds",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "buildingInstanceID",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "mobileUnitID",
+          "type": "bytes24"
+        }
+      ],
+      "name": "onUnitArrive",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract Game",
+          "name": "ds",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "buildingInstanceID",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "mobileUnitID",
+          "type": "bytes24"
+        }
+      ],
+      "name": "onUnitLeave",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract Game",
+          "name": "ds",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "buildingInstance",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "use",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b506103ba806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806324fd46e81461005157806367cace071461006657806391d83c5714610051578063f03ad92f14610079575b600080fd5b61006461005f3660046101d2565b505050565b005b61006461007436600461022d565b61008d565b61006461008736600461022d565b50505050565b836001600160a01b031663ebb3d5896040518163ffffffff1660e01b81526004016020604051808303816000875af11580156100cd573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100f19190610312565b60405167ffffffffffffffff19851660248201526001600160a01b03919091169063ab7fff189060440160408051601f198184030181529181526020820180516001600160e01b031663119645df60e31b179052516001600160e01b031960e084901b1681526101649190600401610336565b600060405180830381600087803b15801561017e57600080fd5b505af1158015610192573d6000803e3d6000fd5b5050505050505050565b6001600160a01b03811681146101b157600080fd5b50565b803567ffffffffffffffff19811681146101cd57600080fd5b919050565b6000806000606084860312156101e757600080fd5b83356101f28161019c565b9250610200602085016101b4565b915061020e604085016101b4565b90509250925092565b634e487b7160e01b600052604160045260246000fd5b6000806000806080858703121561024357600080fd5b843561024e8161019c565b935061025c602086016101b4565b925061026a604086016101b4565b9150606085013567ffffffffffffffff8082111561028757600080fd5b818701915087601f83011261029b57600080fd5b8135818111156102ad576102ad610217565b604051601f8201601f19908116603f011681019083821181831017156102d5576102d5610217565b816040528281528a60208487010111156102ee57600080fd5b82602086016020830137600060208483010152809550505050505092959194509250565b60006020828403121561032457600080fd5b815161032f8161019c565b9392505050565b600060208083528351808285015260005b8181101561036357858101830151858201604001528201610347565b506000604082860101526040601f19601f830116850101925050509291505056fea2646970667358221220510744692d246bc52ef42f7b436b30e2f98f0bbf82400871e9427091ec9b130e64736f6c63430008130033",
+    "sourceMap": "315:251:159:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806324fd46e81461005157806367cace071461006657806391d83c5714610051578063f03ad92f14610079575b600080fd5b61006461005f3660046101d2565b505050565b005b61006461007436600461022d565b61008d565b61006461008736600461022d565b50505050565b836001600160a01b031663ebb3d5896040518163ffffffff1660e01b81526004016020604051808303816000875af11580156100cd573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100f19190610312565b60405167ffffffffffffffff19851660248201526001600160a01b03919091169063ab7fff189060440160408051601f198184030181529181526020820180516001600160e01b031663119645df60e31b179052516001600160e01b031960e084901b1681526101649190600401610336565b600060405180830381600087803b15801561017e57600080fd5b505af1158015610192573d6000803e3d6000fd5b5050505050505050565b6001600160a01b03811681146101b157600080fd5b50565b803567ffffffffffffffff19811681146101cd57600080fd5b919050565b6000806000606084860312156101e757600080fd5b83356101f28161019c565b9250610200602085016101b4565b915061020e604085016101b4565b90509250925092565b634e487b7160e01b600052604160045260246000fd5b6000806000806080858703121561024357600080fd5b843561024e8161019c565b935061025c602086016101b4565b925061026a604086016101b4565b9150606085013567ffffffffffffffff8082111561028757600080fd5b818701915087601f83011261029b57600080fd5b8135818111156102ad576102ad610217565b604051601f8201601f19908116603f011681019083821181831017156102d5576102d5610217565b816040528281528a60208487010111156102ee57600080fd5b82602086016020830137600060208483010152809550505050505092959194509250565b60006020828403121561032457600080fd5b815161032f8161019c565b9392505050565b600060208083528351808285015260005b8181101561036357858101830151858201604001528201610347565b506000604082860101526040601f19601f830116850101925050509291505056fea2646970667358221220510744692d246bc52ef42f7b436b30e2f98f0bbf82400871e9427091ec9b130e64736f6c63430008130033",
+    "sourceMap": "315:251:159:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;983:99:38;;;;;;:::i;:::-;;;;;;;359:205:159;;;;;;:::i;:::-;;:::i;529:139:38:-;;;;;;:::i;:::-;;;;;;359:205:159;479:2;-1:-1:-1;;;;;479:16:159;;:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;507:49;;-1:-1:-1;;2563:36:197;;507:49:159;;;2545:55:197;-1:-1:-1;;;;;479:27:159;;;;;;;2518:18:197;;507:49:159;;;-1:-1:-1;;507:49:159;;;;;;;;;;;;;;-1:-1:-1;;;;;507:49:159;-1:-1:-1;;;507:49:159;;;479:78;-1:-1:-1;;;;;;507:49:159;479:78;;;;;;;;507:49;479:78;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;359:205;;;;:::o;14:137:197:-;-1:-1:-1;;;;;95:31:197;;85:42;;75:70;;141:1;138;131:12;75:70;14:137;:::o;156:177::-;224:20;;-1:-1:-1;;273:35:197;;263:46;;253:74;;323:1;320;313:12;253:74;156:177;;;:::o;338:414::-;428:6;436;444;497:2;485:9;476:7;472:23;468:32;465:52;;;513:1;510;503:12;465:52;552:9;539:23;571:37;602:5;571:37;:::i;:::-;627:5;-1:-1:-1;651:38:197;685:2;670:18;;651:38;:::i;:::-;641:48;;708:38;742:2;731:9;727:18;708:38;:::i;:::-;698:48;;338:414;;;;;:::o;757:127::-;818:10;813:3;809:20;806:1;799:31;849:4;846:1;839:15;873:4;870:1;863:15;889:1224;997:6;1005;1013;1021;1074:3;1062:9;1053:7;1049:23;1045:33;1042:53;;;1091:1;1088;1081:12;1042:53;1130:9;1117:23;1149:37;1180:5;1149:37;:::i;:::-;1205:5;-1:-1:-1;1229:38:197;1263:2;1248:18;;1229:38;:::i;:::-;1219:48;;1286:38;1320:2;1309:9;1305:18;1286:38;:::i;:::-;1276:48;;1375:2;1364:9;1360:18;1347:32;1398:18;1439:2;1431:6;1428:14;1425:34;;;1455:1;1452;1445:12;1425:34;1493:6;1482:9;1478:22;1468:32;;1538:7;1531:4;1527:2;1523:13;1519:27;1509:55;;1560:1;1557;1550:12;1509:55;1596:2;1583:16;1618:2;1614;1611:10;1608:36;;;1624:18;;:::i;:::-;1699:2;1693:9;1667:2;1753:13;;-1:-1:-1;;1749:22:197;;;1773:2;1745:31;1741:40;1729:53;;;1797:18;;;1817:22;;;1794:46;1791:72;;;1843:18;;:::i;:::-;1883:10;1879:2;1872:22;1918:2;1910:6;1903:18;1958:7;1953:2;1948;1944;1940:11;1936:20;1933:33;1930:53;;;1979:1;1976;1969:12;1930:53;2035:2;2030;2026;2022:11;2017:2;2009:6;2005:15;1992:46;2080:1;2075:2;2070;2062:6;2058:15;2054:24;2047:35;2101:6;2091:16;;;;;;;889:1224;;;;;;;:::o;2118:276::-;2207:6;2260:2;2248:9;2239:7;2235:23;2231:32;2228:52;;;2276:1;2273;2266:12;2228:52;2308:9;2302:16;2327:37;2358:5;2327:37;:::i;:::-;2383:5;2118:276;-1:-1:-1;;;2118:276:197:o;2611:546::-;2721:4;2750:2;2779;2768:9;2761:21;2811:6;2805:13;2854:6;2849:2;2838:9;2834:18;2827:34;2879:1;2889:140;2903:6;2900:1;2897:13;2889:140;;;2998:14;;;2994:23;;2988:30;2964:17;;;2983:2;2960:26;2953:66;2918:10;;2889:140;;;2893:3;3078:1;3073:2;3064:6;3053:9;3049:22;3045:31;3038:42;3148:2;3141;3137:7;3132:2;3124:6;3120:15;3116:29;3105:9;3101:45;3097:54;3089:62;;;;2611:546;;;;:::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "construct(address,bytes24,bytes24,bytes)": "f03ad92f",
+    "onUnitArrive(address,bytes24,bytes24)": "91d83c57",
+    "onUnitLeave(address,bytes24,bytes24)": "24fd46e8",
+    "use(address,bytes24,bytes24,bytes)": "67cace07"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract Game\",\"name\":\"ds\",\"type\":\"address\"},{\"internalType\":\"bytes24\",\"name\":\"buildingInstanceID\",\"type\":\"bytes24\"},{\"internalType\":\"bytes24\",\"name\":\"mobileUnitID\",\"type\":\"bytes24\"},{\"internalType\":\"bytes\",\"name\":\"payload\",\"type\":\"bytes\"}],\"name\":\"construct\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract Game\",\"name\":\"ds\",\"type\":\"address\"},{\"internalType\":\"bytes24\",\"name\":\"buildingInstanceID\",\"type\":\"bytes24\"},{\"internalType\":\"bytes24\",\"name\":\"mobileUnitID\",\"type\":\"bytes24\"}],\"name\":\"onUnitArrive\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract Game\",\"name\":\"ds\",\"type\":\"address\"},{\"internalType\":\"bytes24\",\"name\":\"buildingInstanceID\",\"type\":\"bytes24\"},{\"internalType\":\"bytes24\",\"name\":\"mobileUnitID\",\"type\":\"bytes24\"}],\"name\":\"onUnitLeave\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract Game\",\"name\":\"ds\",\"type\":\"address\"},{\"internalType\":\"bytes24\",\"name\":\"buildingInstance\",\"type\":\"bytes24\"},{\"internalType\":\"bytes24\",\"name\":\"\",\"type\":\"bytes24\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"use\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/maps/tutorial-room-3/CastleOfTreasure.sol\":\"BasicFactory\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ds/=src/\",\":abdk-libraries-solidity/=lib/abdk-libraries-solidity/\",\":cog/=lib/cog/contracts/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/cog/contracts/src/IDispatcher.sol\":{\"keccak256\":\"0x90266b449f7c4b71d4c9e132d1aeb068c73adbdfe5d98e8acb10a299d0c0f474\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://780063f00c17f24304c1b3c4b785be3698d350c3374574280d922b4ea1afbd2a\",\"dweb:/ipfs/QmZEF1Tju9WRFdw5Bj3PfgdHUW7ZbaS3iPuJFK5egf5yby\"]},\"lib/cog/contracts/src/IGame.sol\":{\"keccak256\":\"0x877cd418ed089263f16b5070d761a7284e604f78b0003b69ed79eadeeefae28b\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8896f0620f3c3976596d4ed4d92e967bfbe90406fb10d30876d6f6f14cdff06c\",\"dweb:/ipfs/QmfYBpNYEXJB7p4cD7j2e8syHmbYAgnU3UJShoVPWSMYto\"]},\"lib/cog/contracts/src/IRouter.sol\":{\"keccak256\":\"0xbc47bda32a45358b9fd41d7902ec9a419490fb31b4dd1c14590d57678f7bc5ad\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a6783f200645507bfc9329a83a3d85d9f9cfa3654813a05e8dcf5868b4183e2c\",\"dweb:/ipfs/QmNU8YuEw4xb7SResemUVCaMBwBgLCGJ1uqJKte8bUJsHj\"]},\"lib/cog/contracts/src/IState.sol\":{\"keccak256\":\"0x9fbacc5f0d7796b9b1eab0c719136eb671fa46a0e14d5c46aea226439995e7f2\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://c3caff9ef3b74a76700d8bc1405602ceddfcaaebba772e05da8a0c231c927acd\",\"dweb:/ipfs/QmWwYBEdjsKkZD63Nj4F8ofeYZi7zNrscPLnoCWKkfA6ne\"]},\"lib/cog/contracts/src/StateOpsRecorder.sol\":{\"keccak256\":\"0xf3428d7bd6ff07713af005c1656c06dace1621ed447f095157317aec996e8d27\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://29662c56108e2e353bfa84f2aedecac05d423c812e16bf5a1cde0dbad0ab29fa\",\"dweb:/ipfs/QmeqTEDeWpJiSRRYJmc79waAUSYJ68Bczm9pt3wcnjLTJ4\"]},\"src/actions/Actions.sol\":{\"keccak256\":\"0x28d6216c5c30052e5cdf2269848b4750ac3e4f53df5fababe93eba61beb07882\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://935c0bfa505a1f67ad7b18d981de7a379dc6af08037f1c608a43d230f9e029b4\",\"dweb:/ipfs/QmQKn75iyScFxZdq4VnWZfr4agzKqr6o1gkfMQ33Uv2JfM\"]},\"src/ext/BuildingKind.sol\":{\"keccak256\":\"0x932e24991d722e01bd01294c436c8fadf9a18eccb91ec34c9f23c8c187b686a0\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2e5090dfe253acb5e5d7c52e3aff1cd07329d1a13a8e756e5c918f2ca57cd9bc\",\"dweb:/ipfs/QmWREnxMyTpo4GHqi97bNtmNfKgMDxm8LEgktdLoHEGXEo\"]},\"src/maps/tutorial-room-3/CastleOfTreasure.sol\":{\"keccak256\":\"0x7b2fb2a8dc5e4fd79a45703d0904d8b8e85896cd2230e21ac379b04ddfa2579e\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://b1f430f6bfce0f71fdb9274a74640f1555179868ebe1c207d4ea2011c75352df\",\"dweb:/ipfs/Qmc4Df56GS1eCYcZRGehZ887iN1U5kdq1gm1RsbdSkJCgq\"]},\"src/schema/Schema.sol\":{\"keccak256\":\"0x8e596a92d1eb750c9d5cc4d4b31f035059edcfe30f7a7c08be7224f44e7cbb4a\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://02fc2e8827bb251d42dcb05368dfe4dca1d33aaa764bdf88ae8315088ffdc080\",\"dweb:/ipfs/QmXeh9anjY47TjzMZwUXppDJTKr1RY86zxkYb5vCqa5yMH\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract Game",
+              "name": "ds",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "buildingInstanceID",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "mobileUnitID",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes",
+              "name": "payload",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "construct"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract Game",
+              "name": "ds",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "buildingInstanceID",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "mobileUnitID",
+              "type": "bytes24"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "onUnitArrive"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract Game",
+              "name": "ds",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "buildingInstanceID",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "mobileUnitID",
+              "type": "bytes24"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "onUnitLeave"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract Game",
+              "name": "ds",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "buildingInstance",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "use"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@ds/=src/",
+        "abdk-libraries-solidity/=lib/abdk-libraries-solidity/",
+        "cog/=lib/cog/contracts/src/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/maps/tutorial-room-3/CastleOfTreasure.sol": "BasicFactory"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/cog/contracts/src/IDispatcher.sol": {
+        "keccak256": "0x90266b449f7c4b71d4c9e132d1aeb068c73adbdfe5d98e8acb10a299d0c0f474",
+        "urls": [
+          "bzz-raw://780063f00c17f24304c1b3c4b785be3698d350c3374574280d922b4ea1afbd2a",
+          "dweb:/ipfs/QmZEF1Tju9WRFdw5Bj3PfgdHUW7ZbaS3iPuJFK5egf5yby"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/IGame.sol": {
+        "keccak256": "0x877cd418ed089263f16b5070d761a7284e604f78b0003b69ed79eadeeefae28b",
+        "urls": [
+          "bzz-raw://8896f0620f3c3976596d4ed4d92e967bfbe90406fb10d30876d6f6f14cdff06c",
+          "dweb:/ipfs/QmfYBpNYEXJB7p4cD7j2e8syHmbYAgnU3UJShoVPWSMYto"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/IRouter.sol": {
+        "keccak256": "0xbc47bda32a45358b9fd41d7902ec9a419490fb31b4dd1c14590d57678f7bc5ad",
+        "urls": [
+          "bzz-raw://a6783f200645507bfc9329a83a3d85d9f9cfa3654813a05e8dcf5868b4183e2c",
+          "dweb:/ipfs/QmNU8YuEw4xb7SResemUVCaMBwBgLCGJ1uqJKte8bUJsHj"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/IState.sol": {
+        "keccak256": "0x9fbacc5f0d7796b9b1eab0c719136eb671fa46a0e14d5c46aea226439995e7f2",
+        "urls": [
+          "bzz-raw://c3caff9ef3b74a76700d8bc1405602ceddfcaaebba772e05da8a0c231c927acd",
+          "dweb:/ipfs/QmWwYBEdjsKkZD63Nj4F8ofeYZi7zNrscPLnoCWKkfA6ne"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/StateOpsRecorder.sol": {
+        "keccak256": "0xf3428d7bd6ff07713af005c1656c06dace1621ed447f095157317aec996e8d27",
+        "urls": [
+          "bzz-raw://29662c56108e2e353bfa84f2aedecac05d423c812e16bf5a1cde0dbad0ab29fa",
+          "dweb:/ipfs/QmeqTEDeWpJiSRRYJmc79waAUSYJ68Bczm9pt3wcnjLTJ4"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/actions/Actions.sol": {
+        "keccak256": "0x28d6216c5c30052e5cdf2269848b4750ac3e4f53df5fababe93eba61beb07882",
+        "urls": [
+          "bzz-raw://935c0bfa505a1f67ad7b18d981de7a379dc6af08037f1c608a43d230f9e029b4",
+          "dweb:/ipfs/QmQKn75iyScFxZdq4VnWZfr4agzKqr6o1gkfMQ33Uv2JfM"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/ext/BuildingKind.sol": {
+        "keccak256": "0x932e24991d722e01bd01294c436c8fadf9a18eccb91ec34c9f23c8c187b686a0",
+        "urls": [
+          "bzz-raw://2e5090dfe253acb5e5d7c52e3aff1cd07329d1a13a8e756e5c918f2ca57cd9bc",
+          "dweb:/ipfs/QmWREnxMyTpo4GHqi97bNtmNfKgMDxm8LEgktdLoHEGXEo"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/maps/tutorial-room-3/CastleOfTreasure.sol": {
+        "keccak256": "0x7b2fb2a8dc5e4fd79a45703d0904d8b8e85896cd2230e21ac379b04ddfa2579e",
+        "urls": [
+          "bzz-raw://b1f430f6bfce0f71fdb9274a74640f1555179868ebe1c207d4ea2011c75352df",
+          "dweb:/ipfs/Qmc4Df56GS1eCYcZRGehZ887iN1U5kdq1gm1RsbdSkJCgq"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/schema/Schema.sol": {
+        "keccak256": "0x8e596a92d1eb750c9d5cc4d4b31f035059edcfe30f7a7c08be7224f44e7cbb4a",
+        "urls": [
+          "bzz-raw://02fc2e8827bb251d42dcb05368dfe4dca1d33aaa764bdf88ae8315088ffdc080",
+          "dweb:/ipfs/QmXeh9anjY47TjzMZwUXppDJTKr1RY86zxkYb5vCqa5yMH"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/maps/tutorial-room-3/CastleOfTreasure.sol",
+    "id": 55078,
+    "exportedSymbols": {
+      "Actions": [
+        38764
+      ],
+      "BasicFactory": [
+        55077
+      ],
+      "BuildingKind": [
+        38844
+      ],
+      "Game": [
+        4792
+      ],
+      "Schema": [
+        70081
+      ],
+      "State": [
+        5784
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:528:159",
+    "nodes": [
+      {
+        "id": 55032,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:159",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 55034,
+        "nodeType": "ImportDirective",
+        "src": "65:35:159",
+        "nodes": [],
+        "absolutePath": "lib/cog/contracts/src/IGame.sol",
+        "file": "cog/IGame.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 55078,
+        "sourceUnit": 4793,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 55033,
+              "name": "Game",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4792,
+              "src": "73:4:159",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 55036,
+        "nodeType": "ImportDirective",
+        "src": "101:37:159",
+        "nodes": [],
+        "absolutePath": "lib/cog/contracts/src/IState.sol",
+        "file": "cog/IState.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 55078,
+        "sourceUnit": 5785,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 55035,
+              "name": "State",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 5784,
+              "src": "109:5:159",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 55038,
+        "nodeType": "ImportDirective",
+        "src": "139:45:159",
+        "nodes": [],
+        "absolutePath": "src/schema/Schema.sol",
+        "file": "@ds/schema/Schema.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 55078,
+        "sourceUnit": 70082,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 55037,
+              "name": "Schema",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 70081,
+              "src": "147:6:159",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 55040,
+        "nodeType": "ImportDirective",
+        "src": "185:48:159",
+        "nodes": [],
+        "absolutePath": "src/actions/Actions.sol",
+        "file": "@ds/actions/Actions.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 55078,
+        "sourceUnit": 38765,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 55039,
+              "name": "Actions",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38764,
+              "src": "193:7:159",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 55042,
+        "nodeType": "ImportDirective",
+        "src": "234:54:159",
+        "nodes": [],
+        "absolutePath": "src/ext/BuildingKind.sol",
+        "file": "@ds/ext/BuildingKind.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 55078,
+        "sourceUnit": 38845,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 55041,
+              "name": "BuildingKind",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38844,
+              "src": "242:12:159",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 55046,
+        "nodeType": "UsingForDirective",
+        "src": "290:23:159",
+        "nodes": [],
+        "global": false,
+        "libraryName": {
+          "id": 55043,
+          "name": "Schema",
+          "nameLocations": [
+            "296:6:159"
+          ],
+          "nodeType": "IdentifierPath",
+          "referencedDeclaration": 70081,
+          "src": "296:6:159"
+        },
+        "typeName": {
+          "id": 55045,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 55044,
+            "name": "State",
+            "nameLocations": [
+              "307:5:159"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 5784,
+            "src": "307:5:159"
+          },
+          "referencedDeclaration": 5784,
+          "src": "307:5:159",
+          "typeDescriptions": {
+            "typeIdentifier": "t_contract$_State_$5784",
+            "typeString": "contract State"
+          }
+        }
+      },
+      {
+        "id": 55077,
+        "nodeType": "ContractDefinition",
+        "src": "315:251:159",
+        "nodes": [
+          {
+            "id": 55076,
+            "nodeType": "FunctionDefinition",
+            "src": "359:205:159",
+            "nodes": [],
+            "body": {
+              "id": 55075,
+              "nodeType": "Block",
+              "src": "469:95:159",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "expression": {
+                              "id": 55068,
+                              "name": "Actions",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38764,
+                              "src": "522:7:159",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_Actions_$38764_$",
+                                "typeString": "type(contract Actions)"
+                              }
+                            },
+                            "id": 55069,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "memberLocation": "530:5:159",
+                            "memberName": "CRAFT",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 38534,
+                            "src": "522:13:159",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_declaration_nonpayable$_t_bytes24_$returns$__$",
+                              "typeString": "function Actions.CRAFT(bytes24)"
+                            }
+                          },
+                          {
+                            "components": [
+                              {
+                                "id": 55070,
+                                "name": "buildingInstance",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 55053,
+                                "src": "538:16:159",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes24",
+                                  "typeString": "bytes24"
+                                }
+                              }
+                            ],
+                            "id": 55071,
+                            "isConstant": false,
+                            "isInlineArray": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "TupleExpression",
+                            "src": "537:18:159",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes24",
+                              "typeString": "bytes24"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_function_declaration_nonpayable$_t_bytes24_$returns$__$",
+                              "typeString": "function Actions.CRAFT(bytes24)"
+                            },
+                            {
+                              "typeIdentifier": "t_bytes24",
+                              "typeString": "bytes24"
+                            }
+                          ],
+                          "expression": {
+                            "id": 55066,
+                            "name": "abi",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -1,
+                            "src": "507:3:159",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_abi",
+                              "typeString": "abi"
+                            }
+                          },
+                          "id": 55067,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberLocation": "511:10:159",
+                          "memberName": "encodeCall",
+                          "nodeType": "MemberAccess",
+                          "src": "507:14:159",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_abiencodecall_pure$__$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function () pure returns (bytes memory)"
+                          }
+                        },
+                        "id": 55072,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "507:49:159",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "expression": {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 55061,
+                            "name": "ds",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 55051,
+                            "src": "479:2:159",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Game_$4792",
+                              "typeString": "contract Game"
+                            }
+                          },
+                          "id": 55063,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "482:13:159",
+                          "memberName": "getDispatcher",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 4779,
+                          "src": "479:16:159",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_contract$_Dispatcher_$4746_$",
+                            "typeString": "function () external returns (contract Dispatcher)"
+                          }
+                        },
+                        "id": 55064,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "479:18:159",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Dispatcher_$4746",
+                          "typeString": "contract Dispatcher"
+                        }
+                      },
+                      "id": 55065,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "498:8:159",
+                      "memberName": "dispatch",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4695,
+                      "src": "479:27:159",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes_memory_ptr_$returns$__$",
+                        "typeString": "function (bytes memory) external"
+                      }
+                    },
+                    "id": 55073,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "479:78:159",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 55074,
+                  "nodeType": "ExpressionStatement",
+                  "src": "479:78:159"
+                }
+              ]
+            },
+            "baseFunctions": [
+              38808
+            ],
+            "functionSelector": "67cace07",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "use",
+            "nameLocation": "368:3:159",
+            "overrides": {
+              "id": 55059,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "460:8:159"
+            },
+            "parameters": {
+              "id": 55058,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 55051,
+                  "mutability": "mutable",
+                  "name": "ds",
+                  "nameLocation": "377:2:159",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55076,
+                  "src": "372:7:159",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Game_$4792",
+                    "typeString": "contract Game"
+                  },
+                  "typeName": {
+                    "id": 55050,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 55049,
+                      "name": "Game",
+                      "nameLocations": [
+                        "372:4:159"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 4792,
+                      "src": "372:4:159"
+                    },
+                    "referencedDeclaration": 4792,
+                    "src": "372:4:159",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Game_$4792",
+                      "typeString": "contract Game"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 55053,
+                  "mutability": "mutable",
+                  "name": "buildingInstance",
+                  "nameLocation": "389:16:159",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55076,
+                  "src": "381:24:159",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes24",
+                    "typeString": "bytes24"
+                  },
+                  "typeName": {
+                    "id": 55052,
+                    "name": "bytes24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "381:7:159",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes24",
+                      "typeString": "bytes24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 55055,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55076,
+                  "src": "407:7:159",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes24",
+                    "typeString": "bytes24"
+                  },
+                  "typeName": {
+                    "id": 55054,
+                    "name": "bytes24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "407:7:159",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes24",
+                      "typeString": "bytes24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 55057,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55076,
+                  "src": "426:12:159",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 55056,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "426:5:159",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "371:81:159"
+            },
+            "returnParameters": {
+              "id": 55060,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "469:0:159"
+            },
+            "scope": 55077,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 55047,
+              "name": "BuildingKind",
+              "nameLocations": [
+                "340:12:159"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38844,
+              "src": "340:12:159"
+            },
+            "id": 55048,
+            "nodeType": "InheritanceSpecifier",
+            "src": "340:12:159"
+          }
+        ],
+        "canonicalName": "BasicFactory",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          55077,
+          38844,
+          38793
+        ],
+        "name": "BasicFactory",
+        "nameLocation": "324:12:159",
+        "scope": 55078,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 159
+}

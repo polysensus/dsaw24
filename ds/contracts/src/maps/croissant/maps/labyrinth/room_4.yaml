@@ -1,0 +1,116 @@
+---
+kind: Building
+spec:
+  name: Very Large Boulders
+  location:
+    - 21
+    - -27
+    - 6
+
+---
+kind: Building
+spec:
+  name: Very Large Boulders
+  location:
+    - 20
+    - -27
+    - 7
+
+---
+kind: Building
+spec:
+  name: Very Large Boulders
+  location:
+    - 19
+    - -26
+    - 7
+
+---
+kind: Building
+spec:
+  name: Very Large Boulders
+  location:
+    - 19
+    - -27
+    - 8
+
+---
+kind: Building
+spec:
+  name: Large Boulders
+  location:
+    - 20
+    - -28
+    - 8
+
+---
+kind: Building
+spec:
+  name: Very Large Boulders
+  location:
+    - 21
+    - -28
+    - 7
+
+---
+kind: Building
+spec:
+  name: Large Boulders
+  location:
+    - 22
+    - -28
+    - 6
+
+---
+kind: Building
+spec:
+  name: Very Large Boulders
+  location:
+    - 23
+    - -28
+    - 5
+
+---
+kind: Building
+spec:
+  name: Very Large Boulders
+  location:
+    - 22
+    - -29
+    - 7
+
+---
+kind: Building
+spec:
+  name: Very Large Boulders
+  location:
+    - 20
+    - -29
+    - 9
+
+---
+kind: Building
+spec:
+  name: Very Large Boulders
+  location:
+    - 21
+    - -30
+    - 9
+
+---
+kind: Building
+spec:
+  name: Large Boulders
+  location:
+    - 22
+    - -30
+    - 8
+
+---
+kind: Building
+spec:
+  name: Large Boulders
+  location:
+    - 20
+    - -26
+    - 6

@@ -1,0 +1,855 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "dispatcherAddr",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "stateAddr",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "routerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "GameDeployed",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "getDispatcher",
+      "outputs": [
+        {
+          "internalType": "contract Dispatcher",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMetadata",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "url",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct GameMetadata",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getRouter",
+      "outputs": [
+        {
+          "internalType": "contract Router",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getState",
+      "outputs": [
+        {
+          "internalType": "contract State",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getDispatcher()": "ebb3d589",
+    "getMetadata()": "7a5b4f59",
+    "getRouter()": "b0f479a1",
+    "getState()": "1865c57d"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"dispatcherAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"stateAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"routerAddr\",\"type\":\"address\"}],\"name\":\"GameDeployed\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"getDispatcher\",\"outputs\":[{\"internalType\":\"contract Dispatcher\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMetadata\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"url\",\"type\":\"string\"}],\"internalType\":\"struct GameMetadata\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRouter\",\"outputs\":[{\"internalType\":\"contract Router\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getState\",\"outputs\":[{\"internalType\":\"contract State\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/cog/contracts/src/IGame.sol\":\"Game\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ds/=src/\",\":abdk-libraries-solidity/=lib/abdk-libraries-solidity/\",\":cog/=lib/cog/contracts/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/cog/contracts/src/IDispatcher.sol\":{\"keccak256\":\"0x90266b449f7c4b71d4c9e132d1aeb068c73adbdfe5d98e8acb10a299d0c0f474\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://780063f00c17f24304c1b3c4b785be3698d350c3374574280d922b4ea1afbd2a\",\"dweb:/ipfs/QmZEF1Tju9WRFdw5Bj3PfgdHUW7ZbaS3iPuJFK5egf5yby\"]},\"lib/cog/contracts/src/IGame.sol\":{\"keccak256\":\"0x877cd418ed089263f16b5070d761a7284e604f78b0003b69ed79eadeeefae28b\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8896f0620f3c3976596d4ed4d92e967bfbe90406fb10d30876d6f6f14cdff06c\",\"dweb:/ipfs/QmfYBpNYEXJB7p4cD7j2e8syHmbYAgnU3UJShoVPWSMYto\"]},\"lib/cog/contracts/src/IRouter.sol\":{\"keccak256\":\"0xbc47bda32a45358b9fd41d7902ec9a419490fb31b4dd1c14590d57678f7bc5ad\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a6783f200645507bfc9329a83a3d85d9f9cfa3654813a05e8dcf5868b4183e2c\",\"dweb:/ipfs/QmNU8YuEw4xb7SResemUVCaMBwBgLCGJ1uqJKte8bUJsHj\"]},\"lib/cog/contracts/src/IState.sol\":{\"keccak256\":\"0x9fbacc5f0d7796b9b1eab0c719136eb671fa46a0e14d5c46aea226439995e7f2\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://c3caff9ef3b74a76700d8bc1405602ceddfcaaebba772e05da8a0c231c927acd\",\"dweb:/ipfs/QmWwYBEdjsKkZD63Nj4F8ofeYZi7zNrscPLnoCWKkfA6ne\"]},\"lib/cog/contracts/src/StateOpsRecorder.sol\":{\"keccak256\":\"0xf3428d7bd6ff07713af005c1656c06dace1621ed447f095157317aec996e8d27\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://29662c56108e2e353bfa84f2aedecac05d423c812e16bf5a1cde0dbad0ab29fa\",\"dweb:/ipfs/QmeqTEDeWpJiSRRYJmc79waAUSYJ68Bczm9pt3wcnjLTJ4\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "dispatcherAddr",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "stateAddr",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "routerAddr",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "GameDeployed",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "getDispatcher",
+          "outputs": [
+            {
+              "internalType": "contract Dispatcher",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "getMetadata",
+          "outputs": [
+            {
+              "internalType": "struct GameMetadata",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "name",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "url",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "getRouter",
+          "outputs": [
+            {
+              "internalType": "contract Router",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "getState",
+          "outputs": [
+            {
+              "internalType": "contract State",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@ds/=src/",
+        "abdk-libraries-solidity/=lib/abdk-libraries-solidity/",
+        "cog/=lib/cog/contracts/src/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/cog/contracts/src/IGame.sol": "Game"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/cog/contracts/src/IDispatcher.sol": {
+        "keccak256": "0x90266b449f7c4b71d4c9e132d1aeb068c73adbdfe5d98e8acb10a299d0c0f474",
+        "urls": [
+          "bzz-raw://780063f00c17f24304c1b3c4b785be3698d350c3374574280d922b4ea1afbd2a",
+          "dweb:/ipfs/QmZEF1Tju9WRFdw5Bj3PfgdHUW7ZbaS3iPuJFK5egf5yby"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/IGame.sol": {
+        "keccak256": "0x877cd418ed089263f16b5070d761a7284e604f78b0003b69ed79eadeeefae28b",
+        "urls": [
+          "bzz-raw://8896f0620f3c3976596d4ed4d92e967bfbe90406fb10d30876d6f6f14cdff06c",
+          "dweb:/ipfs/QmfYBpNYEXJB7p4cD7j2e8syHmbYAgnU3UJShoVPWSMYto"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/IRouter.sol": {
+        "keccak256": "0xbc47bda32a45358b9fd41d7902ec9a419490fb31b4dd1c14590d57678f7bc5ad",
+        "urls": [
+          "bzz-raw://a6783f200645507bfc9329a83a3d85d9f9cfa3654813a05e8dcf5868b4183e2c",
+          "dweb:/ipfs/QmNU8YuEw4xb7SResemUVCaMBwBgLCGJ1uqJKte8bUJsHj"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/IState.sol": {
+        "keccak256": "0x9fbacc5f0d7796b9b1eab0c719136eb671fa46a0e14d5c46aea226439995e7f2",
+        "urls": [
+          "bzz-raw://c3caff9ef3b74a76700d8bc1405602ceddfcaaebba772e05da8a0c231c927acd",
+          "dweb:/ipfs/QmWwYBEdjsKkZD63Nj4F8ofeYZi7zNrscPLnoCWKkfA6ne"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/StateOpsRecorder.sol": {
+        "keccak256": "0xf3428d7bd6ff07713af005c1656c06dace1621ed447f095157317aec996e8d27",
+        "urls": [
+          "bzz-raw://29662c56108e2e353bfa84f2aedecac05d423c812e16bf5a1cde0dbad0ab29fa",
+          "dweb:/ipfs/QmeqTEDeWpJiSRRYJmc79waAUSYJ68Bczm9pt3wcnjLTJ4"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/cog/contracts/src/IGame.sol",
+    "id": 4793,
+    "exportedSymbols": {
+      "Dispatcher": [
+        4746
+      ],
+      "Game": [
+        4792
+      ],
+      "GameMetadata": [
+        4759
+      ],
+      "Router": [
+        4861
+      ],
+      "State": [
+        5784
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:751:6",
+    "nodes": [
+      {
+        "id": 4748,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:6",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 4750,
+        "nodeType": "ImportDirective",
+        "src": "65:45:6",
+        "nodes": [],
+        "absolutePath": "lib/cog/contracts/src/IDispatcher.sol",
+        "file": "./IDispatcher.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 4793,
+        "sourceUnit": 4747,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 4749,
+              "name": "Dispatcher",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4746,
+              "src": "73:10:6",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 4752,
+        "nodeType": "ImportDirective",
+        "src": "111:37:6",
+        "nodes": [],
+        "absolutePath": "lib/cog/contracts/src/IRouter.sol",
+        "file": "./IRouter.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 4793,
+        "sourceUnit": 4862,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 4751,
+              "name": "Router",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4861,
+              "src": "119:6:6",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 4754,
+        "nodeType": "ImportDirective",
+        "src": "149:35:6",
+        "nodes": [],
+        "absolutePath": "lib/cog/contracts/src/IState.sol",
+        "file": "./IState.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 4793,
+        "sourceUnit": 5785,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 4753,
+              "name": "State",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 5784,
+              "src": "157:5:6",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 4759,
+        "nodeType": "StructDefinition",
+        "src": "186:56:6",
+        "nodes": [],
+        "canonicalName": "GameMetadata",
+        "members": [
+          {
+            "constant": false,
+            "id": 4756,
+            "mutability": "mutable",
+            "name": "name",
+            "nameLocation": "219:4:6",
+            "nodeType": "VariableDeclaration",
+            "scope": 4759,
+            "src": "212:11:6",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 4755,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "212:6:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 4758,
+            "mutability": "mutable",
+            "name": "url",
+            "nameLocation": "236:3:6",
+            "nodeType": "VariableDeclaration",
+            "scope": 4759,
+            "src": "229:10:6",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 4757,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "229:6:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "GameMetadata",
+        "nameLocation": "193:12:6",
+        "scope": 4793,
+        "visibility": "public"
+      },
+      {
+        "id": 4792,
+        "nodeType": "ContractDefinition",
+        "src": "454:335:6",
+        "nodes": [
+          {
+            "id": 4767,
+            "nodeType": "EventDefinition",
+            "src": "475:82:6",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "f983dbfb3d7ef46fae38b82f406ef6895a8239899ab04e0d0cbd6d78a84c6a73",
+            "name": "GameDeployed",
+            "nameLocation": "481:12:6",
+            "parameters": {
+              "id": 4766,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4761,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "dispatcherAddr",
+                  "nameLocation": "502:14:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4767,
+                  "src": "494:22:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4760,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "494:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4763,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "stateAddr",
+                  "nameLocation": "526:9:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4767,
+                  "src": "518:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4762,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "518:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4765,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "routerAddr",
+                  "nameLocation": "545:10:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4767,
+                  "src": "537:18:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4764,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "537:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "493:63:6"
+            }
+          },
+          {
+            "id": 4773,
+            "nodeType": "FunctionDefinition",
+            "src": "563:62:6",
+            "nodes": [],
+            "functionSelector": "7a5b4f59",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMetadata",
+            "nameLocation": "572:11:6",
+            "parameters": {
+              "id": 4768,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "583:2:6"
+            },
+            "returnParameters": {
+              "id": 4772,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4771,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4773,
+                  "src": "604:19:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_GameMetadata_$4759_memory_ptr",
+                    "typeString": "struct GameMetadata"
+                  },
+                  "typeName": {
+                    "id": 4770,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 4769,
+                      "name": "GameMetadata",
+                      "nameLocations": [
+                        "604:12:6"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 4759,
+                      "src": "604:12:6"
+                    },
+                    "referencedDeclaration": 4759,
+                    "src": "604:12:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_GameMetadata_$4759_storage_ptr",
+                      "typeString": "struct GameMetadata"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "603:21:6"
+            },
+            "scope": 4792,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 4779,
+            "nodeType": "FunctionDefinition",
+            "src": "630:55:6",
+            "nodes": [],
+            "functionSelector": "ebb3d589",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDispatcher",
+            "nameLocation": "639:13:6",
+            "parameters": {
+              "id": 4774,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "652:2:6"
+            },
+            "returnParameters": {
+              "id": 4778,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4777,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4779,
+                  "src": "673:10:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Dispatcher_$4746",
+                    "typeString": "contract Dispatcher"
+                  },
+                  "typeName": {
+                    "id": 4776,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 4775,
+                      "name": "Dispatcher",
+                      "nameLocations": [
+                        "673:10:6"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 4746,
+                      "src": "673:10:6"
+                    },
+                    "referencedDeclaration": 4746,
+                    "src": "673:10:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Dispatcher_$4746",
+                      "typeString": "contract Dispatcher"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "672:12:6"
+            },
+            "scope": 4792,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 4785,
+            "nodeType": "FunctionDefinition",
+            "src": "690:47:6",
+            "nodes": [],
+            "functionSelector": "b0f479a1",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRouter",
+            "nameLocation": "699:9:6",
+            "parameters": {
+              "id": 4780,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "708:2:6"
+            },
+            "returnParameters": {
+              "id": 4784,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4783,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4785,
+                  "src": "729:6:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Router_$4861",
+                    "typeString": "contract Router"
+                  },
+                  "typeName": {
+                    "id": 4782,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 4781,
+                      "name": "Router",
+                      "nameLocations": [
+                        "729:6:6"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 4861,
+                      "src": "729:6:6"
+                    },
+                    "referencedDeclaration": 4861,
+                    "src": "729:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Router_$4861",
+                      "typeString": "contract Router"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "728:8:6"
+            },
+            "scope": 4792,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 4791,
+            "nodeType": "FunctionDefinition",
+            "src": "742:45:6",
+            "nodes": [],
+            "functionSelector": "1865c57d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getState",
+            "nameLocation": "751:8:6",
+            "parameters": {
+              "id": 4786,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "759:2:6"
+            },
+            "returnParameters": {
+              "id": 4790,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4789,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4791,
+                  "src": "780:5:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_State_$5784",
+                    "typeString": "contract State"
+                  },
+                  "typeName": {
+                    "id": 4788,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 4787,
+                      "name": "State",
+                      "nameLocations": [
+                        "780:5:6"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 5784,
+                      "src": "780:5:6"
+                    },
+                    "referencedDeclaration": 5784,
+                    "src": "780:5:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_State_$5784",
+                      "typeString": "contract State"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "779:7:6"
+            },
+            "scope": 4792,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Game",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          4792
+        ],
+        "name": "Game",
+        "nameLocation": "464:4:6",
+        "scope": 4793,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 6
+}

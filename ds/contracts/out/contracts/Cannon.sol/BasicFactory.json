@@ -1,0 +1,1894 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract Game",
+          "name": "ds",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "actor",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "construct",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract Game",
+          "name": "ds",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "buildingInstanceID",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "mobileUnitID",
+          "type": "bytes24"
+        }
+      ],
+      "name": "onUnitArrive",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract Game",
+          "name": "ds",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "buildingInstanceID",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "mobileUnitID",
+          "type": "bytes24"
+        }
+      ],
+      "name": "onUnitLeave",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract Game",
+          "name": "ds",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "buildingInstance",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes24",
+          "name": "",
+          "type": "bytes24"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "use",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5061090f806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806324fd46e81461005157806367cace071461006657806391d83c5714610051578063f03ad92f14610079575b600080fd5b61006461005f366004610649565b505050565b005b6100646100743660046106aa565b61008c565b6100646100873660046106aa565b61019b565b836001600160a01b031663ebb3d5896040518163ffffffff1660e01b81526004016020604051808303816000875af11580156100cc573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100f09190610793565b60405167ffffffffffffffff19851660248201526001600160a01b03919091169063ab7fff189060440160408051601f198184030181529181526020820180516001600160e01b031663119645df60e31b179052516001600160e01b031960e084901b16815261016391906004016107b7565b600060405180830381600087803b15801561017d57600080fd5b505af1158015610191573d6000803e3d6000fd5b5050505050505050565b6000846001600160a01b0316631865c57d6040518163ffffffff1660e01b81526004016020604051808303816000875af11580156101dd573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102019190610793565b90506000808061022d8487776a7a67f00181bf3a000000010000000f0000000f0000000f60401b610327565b9194509250905067ffffffffffffffff1983166000036102b15760405162461bcd60e51b815260206004820152603560248201527f796f75206e6565642061206372616674696e672068616d6d657220746f20636f6044820152746e7374727563742074686973206275696c64696e6760581b606482015260840160405180910390fd5b60006102be60018361081b565b90508067ffffffffffffffff166000036102eb576102e66001600160a01b0386168585610410565b61031c565b61031c6001600160a01b0386168585776a7a67f00181bf3a000000010000000f0000000f0000000f60401b8561047e565b505050505050505050565b60008080805b60028160ff1610156103fb57600061034f6001600160a01b038916888461050c565b905067ffffffffffffffff198116156103e85760005b60048160ff1610156103e6576000806103886001600160a01b038c168585610592565b915091508867ffffffffffffffff19168267ffffffffffffffff19161480156103bb575060008167ffffffffffffffff16115b156103d157929650909450909250610407915050565b505080806103de90610843565b915050610365565b505b50806103f381610843565b91505061032d565b50600092508291508190505b93509350939050565b60405163118f53c760e31b81526001600160a01b03841690638c7a9e389061044790630ef6788760e01b9085908790600401610862565b600060405180830381600087803b15801561046157600080fd5b505af1158015610475573d6000803e3d6000fd5b50505050505050565b604051633d18084560e21b8152630ef6788760e01b600482015260ff8416602482015267ffffffffffffffff1980861660448301528316606482015267ffffffffffffffff821660848201526001600160a01b0386169063f46021149060a401600060405180830381600087803b1580156104f857600080fd5b505af115801561031c573d6000803e3d6000fd5b6040516305f922a160e11b815260009081906001600160a01b03861690630bf245429061054890633d604d0560e21b9087908990600401610862565b6040805180830381865afa158015610564573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105889190610892565b5095945050505050565b6040516305f922a160e11b815260009081906001600160a01b03861690630bf24542906105ce90630ef6788760e01b9087908990600401610862565b6040805180830381865afa1580156105ea573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061060e9190610892565b91509150935093915050565b6001600160a01b038116811461062f57600080fd5b50565b67ffffffffffffffff198116811461062f57600080fd5b60008060006060848603121561065e57600080fd5b83356106698161061a565b9250602084013561067981610632565b9150604084013561068981610632565b809150509250925092565b634e487b7160e01b600052604160045260246000fd5b600080600080608085870312156106c057600080fd5b84356106cb8161061a565b935060208501356106db81610632565b925060408501356106eb81610632565b9150606085013567ffffffffffffffff8082111561070857600080fd5b818701915087601f83011261071c57600080fd5b81358181111561072e5761072e610694565b604051601f8201601f19908116603f0116810190838211818310171561075657610756610694565b816040528281528a602084870101111561076f57600080fd5b82602086016020830137600060208483010152809550505050505092959194509250565b6000602082840312156107a557600080fd5b81516107b08161061a565b9392505050565b600060208083528351808285015260005b818110156107e4578581018301518582016040015282016107c8565b506000604082860101526040601f19601f8301168501019250505092915050565b634e487b7160e01b600052601160045260246000fd5b67ffffffffffffffff82811682821603908082111561083c5761083c610805565b5092915050565b600060ff821660ff810361085957610859610805565b60010192915050565b6001600160e01b031993909316835260ff91909116602083015267ffffffffffffffff1916604082015260600190565b600080604083850312156108a557600080fd5b82516108b081610632565b602084015190925067ffffffffffffffff811681146108ce57600080fd5b80915050925092905056fea264697066735822122093eb459bc8f6ae9f981cb41d67cb33d7d569fbdd0801c9b12e855eb3378148f264736f6c63430008130033",
+    "sourceMap": "338:851:54:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806324fd46e81461005157806367cace071461006657806391d83c5714610051578063f03ad92f14610079575b600080fd5b61006461005f366004610649565b505050565b005b6100646100743660046106aa565b61008c565b6100646100873660046106aa565b61019b565b836001600160a01b031663ebb3d5896040518163ffffffff1660e01b81526004016020604051808303816000875af11580156100cc573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100f09190610793565b60405167ffffffffffffffff19851660248201526001600160a01b03919091169063ab7fff189060440160408051601f198184030181529181526020820180516001600160e01b031663119645df60e31b179052516001600160e01b031960e084901b16815261016391906004016107b7565b600060405180830381600087803b15801561017d57600080fd5b505af1158015610191573d6000803e3d6000fd5b5050505050505050565b6000846001600160a01b0316631865c57d6040518163ffffffff1660e01b81526004016020604051808303816000875af11580156101dd573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102019190610793565b90506000808061022d8487776a7a67f00181bf3a000000010000000f0000000f0000000f60401b610327565b9194509250905067ffffffffffffffff1983166000036102b15760405162461bcd60e51b815260206004820152603560248201527f796f75206e6565642061206372616674696e672068616d6d657220746f20636f6044820152746e7374727563742074686973206275696c64696e6760581b606482015260840160405180910390fd5b60006102be60018361081b565b90508067ffffffffffffffff166000036102eb576102e66001600160a01b0386168585610410565b61031c565b61031c6001600160a01b0386168585776a7a67f00181bf3a000000010000000f0000000f0000000f60401b8561047e565b505050505050505050565b60008080805b60028160ff1610156103fb57600061034f6001600160a01b038916888461050c565b905067ffffffffffffffff198116156103e85760005b60048160ff1610156103e6576000806103886001600160a01b038c168585610592565b915091508867ffffffffffffffff19168267ffffffffffffffff19161480156103bb575060008167ffffffffffffffff16115b156103d157929650909450909250610407915050565b505080806103de90610843565b915050610365565b505b50806103f381610843565b91505061032d565b50600092508291508190505b93509350939050565b60405163118f53c760e31b81526001600160a01b03841690638c7a9e389061044790630ef6788760e01b9085908790600401610862565b600060405180830381600087803b15801561046157600080fd5b505af1158015610475573d6000803e3d6000fd5b50505050505050565b604051633d18084560e21b8152630ef6788760e01b600482015260ff8416602482015267ffffffffffffffff1980861660448301528316606482015267ffffffffffffffff821660848201526001600160a01b0386169063f46021149060a401600060405180830381600087803b1580156104f857600080fd5b505af115801561031c573d6000803e3d6000fd5b6040516305f922a160e11b815260009081906001600160a01b03861690630bf245429061054890633d604d0560e21b9087908990600401610862565b6040805180830381865afa158015610564573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105889190610892565b5095945050505050565b6040516305f922a160e11b815260009081906001600160a01b03861690630bf24542906105ce90630ef6788760e01b9087908990600401610862565b6040805180830381865afa1580156105ea573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061060e9190610892565b91509150935093915050565b6001600160a01b038116811461062f57600080fd5b50565b67ffffffffffffffff198116811461062f57600080fd5b60008060006060848603121561065e57600080fd5b83356106698161061a565b9250602084013561067981610632565b9150604084013561068981610632565b809150509250925092565b634e487b7160e01b600052604160045260246000fd5b600080600080608085870312156106c057600080fd5b84356106cb8161061a565b935060208501356106db81610632565b925060408501356106eb81610632565b9150606085013567ffffffffffffffff8082111561070857600080fd5b818701915087601f83011261071c57600080fd5b81358181111561072e5761072e610694565b604051601f8201601f19908116603f0116810190838211818310171561075657610756610694565b816040528281528a602084870101111561076f57600080fd5b82602086016020830137600060208483010152809550505050505092959194509250565b6000602082840312156107a557600080fd5b81516107b08161061a565b9392505050565b600060208083528351808285015260005b818110156107e4578581018301518582016040015282016107c8565b506000604082860101526040601f19601f8301168501019250505092915050565b634e487b7160e01b600052601160045260246000fd5b67ffffffffffffffff82811682821603908082111561083c5761083c610805565b5092915050565b600060ff821660ff810361085957610859610805565b60010192915050565b6001600160e01b031993909316835260ff91909116602083015267ffffffffffffffff1916604082015260600190565b600080604083850312156108a557600080fd5b82516108b081610632565b602084015190925067ffffffffffffffff811681146108ce57600080fd5b80915050925092905056fea264697066735822122093eb459bc8f6ae9f981cb41d67cb33d7d569fbdd0801c9b12e855eb3378148f264736f6c63430008130033",
+    "sourceMap": "338:851:54:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;983:99:38;;;;;;:::i;:::-;;;;;;;382:205:54;;;;;;:::i;:::-;;:::i;593:594::-;;;;;;:::i;:::-;;:::i;382:205::-;502:2;-1:-1:-1;;;;;502:16:54;;:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;530:49;;-1:-1:-1;;2789:36:197;;530:49:54;;;2771:55:197;-1:-1:-1;;;;;502:27:54;;;;;;;2744:18:197;;530:49:54;;;-1:-1:-1;;530:49:54;;;;;;;;;;;;;;-1:-1:-1;;;;;530:49:54;-1:-1:-1;;;530:49:54;;;502:78;-1:-1:-1;;;;;;530:49:54;502:78;;;;;;;;530:49;502:78;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;382:205;;;;:::o;593:594::-;739:11;753:2;-1:-1:-1;;;;;753:11:54;;:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;739:27;-1:-1:-1;778:11:54;;;821:50;739:27;840:5;-1:-1:-1;;;821:11:54;:50::i;:::-;777:94;;-1:-1:-1;777:94:54;-1:-1:-1;777:94:54;-1:-1:-1;;;890:8:54;;897:1;890:8;881:76;;;;-1:-1:-1;;;881:76:54;;3866:2:197;881:76:54;;;3848:21:197;3905:2;3885:18;;;3878:30;3944:34;3924:18;;;3917:62;-1:-1:-1;;;3995:18:197;;;3988:51;4056:19;;881:76:54;;;;;;;;968:17;988:11;998:1;988:7;:11;:::i;:::-;968:31;;1013:10;:15;;1027:1;1013:15;1009:172;;1044:30;-1:-1:-1;;;;;1044:19:54;;1064:3;1069:4;1044:19;:30::i;:::-;1009:172;;;1105:65;-1:-1:-1;;;;;1105:17:54;;1123:3;1128:4;-1:-1:-1;;;1159:10:54;1105:17;:65::i;:::-;729:458;;;;;593:594;;;;:::o;402:554:55:-;479:7;;;;509:423;545:1;534:8;:12;;;509:423;;;570:11;584:35;-1:-1:-1;;;;;584:18:55;;603:5;610:8;584:18;:35::i;:::-;570:49;-1:-1:-1;;;633:8:55;;;629:297;;662:10;657:259;685:1;678:4;:8;;;657:259;;;715:16;;751:28;-1:-1:-1;;;;;751:17:55;;769:3;774:4;751:17;:28::i;:::-;714:65;;;;813:4;801:16;;;:8;:16;;;;:31;;;;;831:1;821:7;:11;;;801:31;797:105;;;864:3;;-1:-1:-1;869:4:55;;-1:-1:-1;875:7:55;;-1:-1:-1;856:27:55;;-1:-1:-1;;856:27:55;797:105;696:220;;688:6;;;;;:::i;:::-;;;;657:259;;;;629:297;-1:-1:-1;548:10:55;;;;:::i;:::-;;;;509:423;;;-1:-1:-1;945:1:55;;-1:-1:-1;945:1:55;;-1:-1:-1;945:1:55;;-1:-1:-1;402:554:55;;;;;;;;:::o;13962:139:175:-;14049:45;;-1:-1:-1;;;14049:45:175;;-1:-1:-1;;;;;14049:12:175;;;;;:45;;-1:-1:-1;;;14062:20:175;14084:4;;14090:3;;14049:45;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;13962:139;;;:::o;13769:187::-;13888:61;;-1:-1:-1;;;13888:61:175;;-1:-1:-1;;;13888:61:175;;;5223:52:197;5323:4;5311:17;;5291:18;;;5284:45;-1:-1:-1;;5407:15:197;;;5387:18;;;5380:43;5459:15;;5439:18;;;5432:43;5352:18;5512:31;;5491:19;;;5484:60;-1:-1:-1;;;;;13888:9:175;;;;;5195:19:197;;13888:61:175;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;14676:221;14819:49;;-1:-1:-1;;;14819:49:175;;14768:20;;;;-1:-1:-1;;;;;14819:9:175;;;;;:49;;-1:-1:-1;;;14829:18:175;14849:9;;14860:7;;14819:49;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;14800:68:175;14676:221;-1:-1:-1;;;;;14676:221:175:o;14107:210::-;14268:42;;-1:-1:-1;;;14268:42:175;;14213:16;;;;-1:-1:-1;;;;;14268:9:175;;;;;:42;;-1:-1:-1;;;14278:20:175;14300:4;;14306:3;;14268:42;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;14261:49;;;;14107:210;;;;;;:::o;14:137:197:-;-1:-1:-1;;;;;95:31:197;;85:42;;75:70;;141:1;138;131:12;75:70;14:137;:::o;156:135::-;-1:-1:-1;;231:35:197;;221:46;;211:74;;281:1;278;271:12;296:548;386:6;394;402;455:2;443:9;434:7;430:23;426:32;423:52;;;471:1;468;461:12;423:52;510:9;497:23;529:37;560:5;529:37;:::i;:::-;585:5;-1:-1:-1;642:2:197;627:18;;614:32;655:33;614:32;655:33;:::i;:::-;707:7;-1:-1:-1;766:2:197;751:18;;738:32;779:33;738:32;779:33;:::i;:::-;831:7;821:17;;;296:548;;;;;:::o;849:127::-;910:10;905:3;901:20;898:1;891:31;941:4;938:1;931:15;965:4;962:1;955:15;981:1358;1089:6;1097;1105;1113;1166:3;1154:9;1145:7;1141:23;1137:33;1134:53;;;1183:1;1180;1173:12;1134:53;1222:9;1209:23;1241:37;1272:5;1241:37;:::i;:::-;1297:5;-1:-1:-1;1354:2:197;1339:18;;1326:32;1367:33;1326:32;1367:33;:::i;:::-;1419:7;-1:-1:-1;1478:2:197;1463:18;;1450:32;1491:33;1450:32;1491:33;:::i;:::-;1543:7;-1:-1:-1;1601:2:197;1586:18;;1573:32;1624:18;1654:14;;;1651:34;;;1681:1;1678;1671:12;1651:34;1719:6;1708:9;1704:22;1694:32;;1764:7;1757:4;1753:2;1749:13;1745:27;1735:55;;1786:1;1783;1776:12;1735:55;1822:2;1809:16;1844:2;1840;1837:10;1834:36;;;1850:18;;:::i;:::-;1925:2;1919:9;1893:2;1979:13;;-1:-1:-1;;1975:22:197;;;1999:2;1971:31;1967:40;1955:53;;;2023:18;;;2043:22;;;2020:46;2017:72;;;2069:18;;:::i;:::-;2109:10;2105:2;2098:22;2144:2;2136:6;2129:18;2184:7;2179:2;2174;2170;2166:11;2162:20;2159:33;2156:53;;;2205:1;2202;2195:12;2156:53;2261:2;2256;2252;2248:11;2243:2;2235:6;2231:15;2218:46;2306:1;2301:2;2296;2288:6;2284:15;2280:24;2273:35;2327:6;2317:16;;;;;;;981:1358;;;;;;;:::o;2344:276::-;2433:6;2486:2;2474:9;2465:7;2461:23;2457:32;2454:52;;;2502:1;2499;2492:12;2454:52;2534:9;2528:16;2553:37;2584:5;2553:37;:::i;:::-;2609:5;2344:276;-1:-1:-1;;;2344:276:197:o;2837:546::-;2947:4;2976:2;3005;2994:9;2987:21;3037:6;3031:13;3080:6;3075:2;3064:9;3060:18;3053:34;3105:1;3115:140;3129:6;3126:1;3123:13;3115:140;;;3224:14;;;3220:23;;3214:30;3190:17;;;3209:2;3186:26;3179:66;3144:10;;3115:140;;;3119:3;3304:1;3299:2;3290:6;3279:9;3275:22;3271:31;3264:42;3374:2;3367;3363:7;3358:2;3350:6;3346:15;3342:29;3331:9;3327:45;3323:54;3315:62;;;;2837:546;;;;:::o;4086:127::-;4147:10;4142:3;4138:20;4135:1;4128:31;4178:4;4175:1;4168:15;4202:4;4199:1;4192:15;4218:183;4286:18;4337:10;;;4325;;;4321:27;;4360:12;;;4357:38;;;4375:18;;:::i;:::-;4357:38;4218:183;;;;:::o;4406:175::-;4443:3;4487:4;4480:5;4476:16;4516:4;4507:7;4504:17;4501:43;;4524:18;;:::i;:::-;4573:1;4560:15;;4406:175;-1:-1:-1;;4406:175:197:o;4586:381::-;-1:-1:-1;;;;;;4800:33:197;;;;4782:52;;4882:4;4870:17;;;;4865:2;4850:18;;4843:45;-1:-1:-1;;4924:36:197;4919:2;4904:18;;4897:64;4770:2;4755:18;;4586:381::o;5555:424::-;5633:6;5641;5694:2;5682:9;5673:7;5669:23;5665:32;5662:52;;;5710:1;5707;5700:12;5662:52;5742:9;5736:16;5761:31;5786:5;5761:31;:::i;:::-;5861:2;5846:18;;5840:25;5811:5;;-1:-1:-1;5909:18:197;5896:32;;5884:45;;5874:73;;5943:1;5940;5933:12;5874:73;5966:7;5956:17;;;5555:424;;;;;:::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "construct(address,bytes24,bytes24,bytes)": "f03ad92f",
+    "onUnitArrive(address,bytes24,bytes24)": "91d83c57",
+    "onUnitLeave(address,bytes24,bytes24)": "24fd46e8",
+    "use(address,bytes24,bytes24,bytes)": "67cace07"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract Game\",\"name\":\"ds\",\"type\":\"address\"},{\"internalType\":\"bytes24\",\"name\":\"\",\"type\":\"bytes24\"},{\"internalType\":\"bytes24\",\"name\":\"actor\",\"type\":\"bytes24\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"construct\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract Game\",\"name\":\"ds\",\"type\":\"address\"},{\"internalType\":\"bytes24\",\"name\":\"buildingInstanceID\",\"type\":\"bytes24\"},{\"internalType\":\"bytes24\",\"name\":\"mobileUnitID\",\"type\":\"bytes24\"}],\"name\":\"onUnitArrive\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract Game\",\"name\":\"ds\",\"type\":\"address\"},{\"internalType\":\"bytes24\",\"name\":\"buildingInstanceID\",\"type\":\"bytes24\"},{\"internalType\":\"bytes24\",\"name\":\"mobileUnitID\",\"type\":\"bytes24\"}],\"name\":\"onUnitLeave\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract Game\",\"name\":\"ds\",\"type\":\"address\"},{\"internalType\":\"bytes24\",\"name\":\"buildingInstance\",\"type\":\"bytes24\"},{\"internalType\":\"bytes24\",\"name\":\"\",\"type\":\"bytes24\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"use\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/maps/croissant/kinds/hc-kinds/engineers/hc-en-config/contracts/Cannon.sol\":\"BasicFactory\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ds/=src/\",\":abdk-libraries-solidity/=lib/abdk-libraries-solidity/\",\":cog/=lib/cog/contracts/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/cog/contracts/src/IDispatcher.sol\":{\"keccak256\":\"0x90266b449f7c4b71d4c9e132d1aeb068c73adbdfe5d98e8acb10a299d0c0f474\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://780063f00c17f24304c1b3c4b785be3698d350c3374574280d922b4ea1afbd2a\",\"dweb:/ipfs/QmZEF1Tju9WRFdw5Bj3PfgdHUW7ZbaS3iPuJFK5egf5yby\"]},\"lib/cog/contracts/src/IGame.sol\":{\"keccak256\":\"0x877cd418ed089263f16b5070d761a7284e604f78b0003b69ed79eadeeefae28b\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8896f0620f3c3976596d4ed4d92e967bfbe90406fb10d30876d6f6f14cdff06c\",\"dweb:/ipfs/QmfYBpNYEXJB7p4cD7j2e8syHmbYAgnU3UJShoVPWSMYto\"]},\"lib/cog/contracts/src/IRouter.sol\":{\"keccak256\":\"0xbc47bda32a45358b9fd41d7902ec9a419490fb31b4dd1c14590d57678f7bc5ad\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a6783f200645507bfc9329a83a3d85d9f9cfa3654813a05e8dcf5868b4183e2c\",\"dweb:/ipfs/QmNU8YuEw4xb7SResemUVCaMBwBgLCGJ1uqJKte8bUJsHj\"]},\"lib/cog/contracts/src/IState.sol\":{\"keccak256\":\"0x9fbacc5f0d7796b9b1eab0c719136eb671fa46a0e14d5c46aea226439995e7f2\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://c3caff9ef3b74a76700d8bc1405602ceddfcaaebba772e05da8a0c231c927acd\",\"dweb:/ipfs/QmWwYBEdjsKkZD63Nj4F8ofeYZi7zNrscPLnoCWKkfA6ne\"]},\"lib/cog/contracts/src/StateOpsRecorder.sol\":{\"keccak256\":\"0xf3428d7bd6ff07713af005c1656c06dace1621ed447f095157317aec996e8d27\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://29662c56108e2e353bfa84f2aedecac05d423c812e16bf5a1cde0dbad0ab29fa\",\"dweb:/ipfs/QmeqTEDeWpJiSRRYJmc79waAUSYJ68Bczm9pt3wcnjLTJ4\"]},\"src/actions/Actions.sol\":{\"keccak256\":\"0x28d6216c5c30052e5cdf2269848b4750ac3e4f53df5fababe93eba61beb07882\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://935c0bfa505a1f67ad7b18d981de7a379dc6af08037f1c608a43d230f9e029b4\",\"dweb:/ipfs/QmQKn75iyScFxZdq4VnWZfr4agzKqr6o1gkfMQ33Uv2JfM\"]},\"src/ext/BuildingKind.sol\":{\"keccak256\":\"0x932e24991d722e01bd01294c436c8fadf9a18eccb91ec34c9f23c8c187b686a0\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2e5090dfe253acb5e5d7c52e3aff1cd07329d1a13a8e756e5c918f2ca57cd9bc\",\"dweb:/ipfs/QmWREnxMyTpo4GHqi97bNtmNfKgMDxm8LEgktdLoHEGXEo\"]},\"src/maps/croissant/kinds/hc-kinds/engineers/hc-en-config/contracts/Cannon.sol\":{\"keccak256\":\"0x668f64e3f1e29333035532899a56fedd3b601e4475b29aa0fb156eb4c89e2df7\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://302deaeed6cc1dfa5a06297cff6d30051da3578f73ab5270754ac1da8a4e969a\",\"dweb:/ipfs/QmPgqMYvU7DKjMCfDff18GoobGH8UH3yjsakkfsYBBbVFC\"]},\"src/maps/croissant/kinds/hc-kinds/engineers/hc-en-config/contracts/Utils.sol\":{\"keccak256\":\"0x52f564e8fe7938a73e4caa9224ba5dcfd91c6c901ec4df32b91a746a182bf9f0\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3d72b12a8cf48495afc07b51400d7a0b94260a56fc7c85c05957acfb9c939b37\",\"dweb:/ipfs/Qmd3TyBsv5aRT3nb3iPoLvQUZ6kDpJ7QMrNW8ggwi9rTsy\"]},\"src/schema/Schema.sol\":{\"keccak256\":\"0x8e596a92d1eb750c9d5cc4d4b31f035059edcfe30f7a7c08be7224f44e7cbb4a\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://02fc2e8827bb251d42dcb05368dfe4dca1d33aaa764bdf88ae8315088ffdc080\",\"dweb:/ipfs/QmXeh9anjY47TjzMZwUXppDJTKr1RY86zxkYb5vCqa5yMH\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract Game",
+              "name": "ds",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "actor",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "construct"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract Game",
+              "name": "ds",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "buildingInstanceID",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "mobileUnitID",
+              "type": "bytes24"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "onUnitArrive"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract Game",
+              "name": "ds",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "buildingInstanceID",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "mobileUnitID",
+              "type": "bytes24"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "onUnitLeave"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract Game",
+              "name": "ds",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "buildingInstance",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "use"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@ds/=src/",
+        "abdk-libraries-solidity/=lib/abdk-libraries-solidity/",
+        "cog/=lib/cog/contracts/src/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/maps/croissant/kinds/hc-kinds/engineers/hc-en-config/contracts/Cannon.sol": "BasicFactory"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/cog/contracts/src/IDispatcher.sol": {
+        "keccak256": "0x90266b449f7c4b71d4c9e132d1aeb068c73adbdfe5d98e8acb10a299d0c0f474",
+        "urls": [
+          "bzz-raw://780063f00c17f24304c1b3c4b785be3698d350c3374574280d922b4ea1afbd2a",
+          "dweb:/ipfs/QmZEF1Tju9WRFdw5Bj3PfgdHUW7ZbaS3iPuJFK5egf5yby"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/IGame.sol": {
+        "keccak256": "0x877cd418ed089263f16b5070d761a7284e604f78b0003b69ed79eadeeefae28b",
+        "urls": [
+          "bzz-raw://8896f0620f3c3976596d4ed4d92e967bfbe90406fb10d30876d6f6f14cdff06c",
+          "dweb:/ipfs/QmfYBpNYEXJB7p4cD7j2e8syHmbYAgnU3UJShoVPWSMYto"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/IRouter.sol": {
+        "keccak256": "0xbc47bda32a45358b9fd41d7902ec9a419490fb31b4dd1c14590d57678f7bc5ad",
+        "urls": [
+          "bzz-raw://a6783f200645507bfc9329a83a3d85d9f9cfa3654813a05e8dcf5868b4183e2c",
+          "dweb:/ipfs/QmNU8YuEw4xb7SResemUVCaMBwBgLCGJ1uqJKte8bUJsHj"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/IState.sol": {
+        "keccak256": "0x9fbacc5f0d7796b9b1eab0c719136eb671fa46a0e14d5c46aea226439995e7f2",
+        "urls": [
+          "bzz-raw://c3caff9ef3b74a76700d8bc1405602ceddfcaaebba772e05da8a0c231c927acd",
+          "dweb:/ipfs/QmWwYBEdjsKkZD63Nj4F8ofeYZi7zNrscPLnoCWKkfA6ne"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/cog/contracts/src/StateOpsRecorder.sol": {
+        "keccak256": "0xf3428d7bd6ff07713af005c1656c06dace1621ed447f095157317aec996e8d27",
+        "urls": [
+          "bzz-raw://29662c56108e2e353bfa84f2aedecac05d423c812e16bf5a1cde0dbad0ab29fa",
+          "dweb:/ipfs/QmeqTEDeWpJiSRRYJmc79waAUSYJ68Bczm9pt3wcnjLTJ4"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/actions/Actions.sol": {
+        "keccak256": "0x28d6216c5c30052e5cdf2269848b4750ac3e4f53df5fababe93eba61beb07882",
+        "urls": [
+          "bzz-raw://935c0bfa505a1f67ad7b18d981de7a379dc6af08037f1c608a43d230f9e029b4",
+          "dweb:/ipfs/QmQKn75iyScFxZdq4VnWZfr4agzKqr6o1gkfMQ33Uv2JfM"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/ext/BuildingKind.sol": {
+        "keccak256": "0x932e24991d722e01bd01294c436c8fadf9a18eccb91ec34c9f23c8c187b686a0",
+        "urls": [
+          "bzz-raw://2e5090dfe253acb5e5d7c52e3aff1cd07329d1a13a8e756e5c918f2ca57cd9bc",
+          "dweb:/ipfs/QmWREnxMyTpo4GHqi97bNtmNfKgMDxm8LEgktdLoHEGXEo"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/maps/croissant/kinds/hc-kinds/engineers/hc-en-config/contracts/Cannon.sol": {
+        "keccak256": "0x668f64e3f1e29333035532899a56fedd3b601e4475b29aa0fb156eb4c89e2df7",
+        "urls": [
+          "bzz-raw://302deaeed6cc1dfa5a06297cff6d30051da3578f73ab5270754ac1da8a4e969a",
+          "dweb:/ipfs/QmPgqMYvU7DKjMCfDff18GoobGH8UH3yjsakkfsYBBbVFC"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/maps/croissant/kinds/hc-kinds/engineers/hc-en-config/contracts/Utils.sol": {
+        "keccak256": "0x52f564e8fe7938a73e4caa9224ba5dcfd91c6c901ec4df32b91a746a182bf9f0",
+        "urls": [
+          "bzz-raw://3d72b12a8cf48495afc07b51400d7a0b94260a56fc7c85c05957acfb9c939b37",
+          "dweb:/ipfs/Qmd3TyBsv5aRT3nb3iPoLvQUZ6kDpJ7QMrNW8ggwi9rTsy"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/schema/Schema.sol": {
+        "keccak256": "0x8e596a92d1eb750c9d5cc4d4b31f035059edcfe30f7a7c08be7224f44e7cbb4a",
+        "urls": [
+          "bzz-raw://02fc2e8827bb251d42dcb05368dfe4dca1d33aaa764bdf88ae8315088ffdc080",
+          "dweb:/ipfs/QmXeh9anjY47TjzMZwUXppDJTKr1RY86zxkYb5vCqa5yMH"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/maps/croissant/kinds/hc-kinds/engineers/hc-en-config/contracts/Cannon.sol",
+    "id": 42222,
+    "exportedSymbols": {
+      "Actions": [
+        38764
+      ],
+      "BasicFactory": [
+        42221
+      ],
+      "BuildingKind": [
+        38844
+      ],
+      "CRAFTING_HAMMER_ITEM_ID": [
+        42236
+      ],
+      "Game": [
+        4792
+      ],
+      "HEADQUARTER_BUILDING_ID": [
+        42239
+      ],
+      "Schema": [
+        70081
+      ],
+      "State": [
+        5784
+      ],
+      "getItemSlot": [
+        42322
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:1151:54",
+    "nodes": [
+      {
+        "id": 42106,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:54",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 42108,
+        "nodeType": "ImportDirective",
+        "src": "65:35:54",
+        "nodes": [],
+        "absolutePath": "lib/cog/contracts/src/IGame.sol",
+        "file": "cog/IGame.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 42222,
+        "sourceUnit": 4793,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 42107,
+              "name": "Game",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4792,
+              "src": "73:4:54",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 42110,
+        "nodeType": "ImportDirective",
+        "src": "101:37:54",
+        "nodes": [],
+        "absolutePath": "lib/cog/contracts/src/IState.sol",
+        "file": "cog/IState.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 42222,
+        "sourceUnit": 5785,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 42109,
+              "name": "State",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 5784,
+              "src": "109:5:54",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 42112,
+        "nodeType": "ImportDirective",
+        "src": "139:45:54",
+        "nodes": [],
+        "absolutePath": "src/schema/Schema.sol",
+        "file": "@ds/schema/Schema.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 42222,
+        "sourceUnit": 70082,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 42111,
+              "name": "Schema",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 70081,
+              "src": "147:6:54",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 42114,
+        "nodeType": "ImportDirective",
+        "src": "185:48:54",
+        "nodes": [],
+        "absolutePath": "src/actions/Actions.sol",
+        "file": "@ds/actions/Actions.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 42222,
+        "sourceUnit": 38765,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 42113,
+              "name": "Actions",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38764,
+              "src": "193:7:54",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 42116,
+        "nodeType": "ImportDirective",
+        "src": "234:54:54",
+        "nodes": [],
+        "absolutePath": "src/ext/BuildingKind.sol",
+        "file": "@ds/ext/BuildingKind.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 42222,
+        "sourceUnit": 38845,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 42115,
+              "name": "BuildingKind",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38844,
+              "src": "242:12:54",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 42117,
+        "nodeType": "ImportDirective",
+        "src": "290:21:54",
+        "nodes": [],
+        "absolutePath": "src/maps/croissant/kinds/hc-kinds/engineers/hc-en-config/contracts/Utils.sol",
+        "file": "./Utils.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 42222,
+        "sourceUnit": 42323,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 42121,
+        "nodeType": "UsingForDirective",
+        "src": "313:23:54",
+        "nodes": [],
+        "global": false,
+        "libraryName": {
+          "id": 42118,
+          "name": "Schema",
+          "nameLocations": [
+            "319:6:54"
+          ],
+          "nodeType": "IdentifierPath",
+          "referencedDeclaration": 70081,
+          "src": "319:6:54"
+        },
+        "typeName": {
+          "id": 42120,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 42119,
+            "name": "State",
+            "nameLocations": [
+              "330:5:54"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 5784,
+            "src": "330:5:54"
+          },
+          "referencedDeclaration": 5784,
+          "src": "330:5:54",
+          "typeDescriptions": {
+            "typeIdentifier": "t_contract$_State_$5784",
+            "typeString": "contract State"
+          }
+        }
+      },
+      {
+        "id": 42221,
+        "nodeType": "ContractDefinition",
+        "src": "338:851:54",
+        "nodes": [
+          {
+            "id": 42151,
+            "nodeType": "FunctionDefinition",
+            "src": "382:205:54",
+            "nodes": [],
+            "body": {
+              "id": 42150,
+              "nodeType": "Block",
+              "src": "492:95:54",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "expression": {
+                              "id": 42143,
+                              "name": "Actions",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38764,
+                              "src": "545:7:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_Actions_$38764_$",
+                                "typeString": "type(contract Actions)"
+                              }
+                            },
+                            "id": 42144,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "memberLocation": "553:5:54",
+                            "memberName": "CRAFT",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 38534,
+                            "src": "545:13:54",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_declaration_nonpayable$_t_bytes24_$returns$__$",
+                              "typeString": "function Actions.CRAFT(bytes24)"
+                            }
+                          },
+                          {
+                            "components": [
+                              {
+                                "id": 42145,
+                                "name": "buildingInstance",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 42128,
+                                "src": "561:16:54",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes24",
+                                  "typeString": "bytes24"
+                                }
+                              }
+                            ],
+                            "id": 42146,
+                            "isConstant": false,
+                            "isInlineArray": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "TupleExpression",
+                            "src": "560:18:54",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes24",
+                              "typeString": "bytes24"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_function_declaration_nonpayable$_t_bytes24_$returns$__$",
+                              "typeString": "function Actions.CRAFT(bytes24)"
+                            },
+                            {
+                              "typeIdentifier": "t_bytes24",
+                              "typeString": "bytes24"
+                            }
+                          ],
+                          "expression": {
+                            "id": 42141,
+                            "name": "abi",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -1,
+                            "src": "530:3:54",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_abi",
+                              "typeString": "abi"
+                            }
+                          },
+                          "id": 42142,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberLocation": "534:10:54",
+                          "memberName": "encodeCall",
+                          "nodeType": "MemberAccess",
+                          "src": "530:14:54",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_abiencodecall_pure$__$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function () pure returns (bytes memory)"
+                          }
+                        },
+                        "id": 42147,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "530:49:54",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "expression": {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 42136,
+                            "name": "ds",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 42126,
+                            "src": "502:2:54",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Game_$4792",
+                              "typeString": "contract Game"
+                            }
+                          },
+                          "id": 42138,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "505:13:54",
+                          "memberName": "getDispatcher",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 4779,
+                          "src": "502:16:54",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_contract$_Dispatcher_$4746_$",
+                            "typeString": "function () external returns (contract Dispatcher)"
+                          }
+                        },
+                        "id": 42139,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "502:18:54",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Dispatcher_$4746",
+                          "typeString": "contract Dispatcher"
+                        }
+                      },
+                      "id": 42140,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "521:8:54",
+                      "memberName": "dispatch",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4695,
+                      "src": "502:27:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes_memory_ptr_$returns$__$",
+                        "typeString": "function (bytes memory) external"
+                      }
+                    },
+                    "id": 42148,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "502:78:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 42149,
+                  "nodeType": "ExpressionStatement",
+                  "src": "502:78:54"
+                }
+              ]
+            },
+            "baseFunctions": [
+              38808
+            ],
+            "functionSelector": "67cace07",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "use",
+            "nameLocation": "391:3:54",
+            "overrides": {
+              "id": 42134,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "483:8:54"
+            },
+            "parameters": {
+              "id": 42133,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42126,
+                  "mutability": "mutable",
+                  "name": "ds",
+                  "nameLocation": "400:2:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42151,
+                  "src": "395:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Game_$4792",
+                    "typeString": "contract Game"
+                  },
+                  "typeName": {
+                    "id": 42125,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 42124,
+                      "name": "Game",
+                      "nameLocations": [
+                        "395:4:54"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 4792,
+                      "src": "395:4:54"
+                    },
+                    "referencedDeclaration": 4792,
+                    "src": "395:4:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Game_$4792",
+                      "typeString": "contract Game"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 42128,
+                  "mutability": "mutable",
+                  "name": "buildingInstance",
+                  "nameLocation": "412:16:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42151,
+                  "src": "404:24:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes24",
+                    "typeString": "bytes24"
+                  },
+                  "typeName": {
+                    "id": 42127,
+                    "name": "bytes24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "404:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes24",
+                      "typeString": "bytes24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 42130,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42151,
+                  "src": "430:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes24",
+                    "typeString": "bytes24"
+                  },
+                  "typeName": {
+                    "id": 42129,
+                    "name": "bytes24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "430:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes24",
+                      "typeString": "bytes24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 42132,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42151,
+                  "src": "449:12:54",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 42131,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "449:5:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "394:81:54"
+            },
+            "returnParameters": {
+              "id": 42135,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "492:0:54"
+            },
+            "scope": 42221,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 42220,
+            "nodeType": "FunctionDefinition",
+            "src": "593:594:54",
+            "nodes": [],
+            "body": {
+              "id": 42219,
+              "nodeType": "Block",
+              "src": "729:458:54",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    42166
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 42166,
+                      "mutability": "mutable",
+                      "name": "state",
+                      "nameLocation": "745:5:54",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 42219,
+                      "src": "739:11:54",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_State_$5784",
+                        "typeString": "contract State"
+                      },
+                      "typeName": {
+                        "id": 42165,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 42164,
+                          "name": "State",
+                          "nameLocations": [
+                            "739:5:54"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 5784,
+                          "src": "739:5:54"
+                        },
+                        "referencedDeclaration": 5784,
+                        "src": "739:5:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_State_$5784",
+                          "typeString": "contract State"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 42170,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 42167,
+                        "name": "ds",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 42154,
+                        "src": "753:2:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Game_$4792",
+                          "typeString": "contract Game"
+                        }
+                      },
+                      "id": 42168,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "756:8:54",
+                      "memberName": "getState",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4791,
+                      "src": "753:11:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_contract$_State_$5784_$",
+                        "typeString": "function () external returns (contract State)"
+                      }
+                    },
+                    "id": 42169,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "753:13:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_State_$5784",
+                      "typeString": "contract State"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "739:27:54"
+                },
+                {
+                  "assignments": [
+                    42172,
+                    42174,
+                    42176
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 42172,
+                      "mutability": "mutable",
+                      "name": "bag",
+                      "nameLocation": "786:3:54",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 42219,
+                      "src": "778:11:54",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes24",
+                        "typeString": "bytes24"
+                      },
+                      "typeName": {
+                        "id": 42171,
+                        "name": "bytes24",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "778:7:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes24",
+                          "typeString": "bytes24"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 42174,
+                      "mutability": "mutable",
+                      "name": "slot",
+                      "nameLocation": "797:4:54",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 42219,
+                      "src": "791:10:54",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 42173,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "791:5:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 42176,
+                      "mutability": "mutable",
+                      "name": "balance",
+                      "nameLocation": "810:7:54",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 42219,
+                      "src": "803:14:54",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      },
+                      "typeName": {
+                        "id": 42175,
+                        "name": "uint64",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "803:6:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint64",
+                          "typeString": "uint64"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 42182,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 42178,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 42166,
+                        "src": "833:5:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_State_$5784",
+                          "typeString": "contract State"
+                        }
+                      },
+                      {
+                        "id": 42179,
+                        "name": "actor",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 42158,
+                        "src": "840:5:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes24",
+                          "typeString": "bytes24"
+                        }
+                      },
+                      {
+                        "id": 42180,
+                        "name": "CRAFTING_HAMMER_ITEM_ID",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 42236,
+                        "src": "847:23:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes24",
+                          "typeString": "bytes24"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_State_$5784",
+                          "typeString": "contract State"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes24",
+                          "typeString": "bytes24"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes24",
+                          "typeString": "bytes24"
+                        }
+                      ],
+                      "id": 42177,
+                      "name": "getItemSlot",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 42322,
+                      "src": "821:11:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_contract$_State_$5784_$_t_bytes24_$_t_bytes24_$returns$_t_bytes24_$_t_uint8_$_t_uint64_$",
+                        "typeString": "function (contract State,bytes24,bytes24) view returns (bytes24,uint8,uint64)"
+                      }
+                    },
+                    "id": 42181,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "821:50:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_bytes24_$_t_uint8_$_t_uint64_$",
+                      "typeString": "tuple(bytes24,uint8,uint64)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "777:94:54"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "components": [
+                          {
+                            "commonType": {
+                              "typeIdentifier": "t_bytes24",
+                              "typeString": "bytes24"
+                            },
+                            "id": 42186,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "id": 42184,
+                              "name": "bag",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 42172,
+                              "src": "890:3:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes24",
+                                "typeString": "bytes24"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "!=",
+                            "rightExpression": {
+                              "hexValue": "30",
+                              "id": 42185,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "897:1:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            },
+                            "src": "890:8:54",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            }
+                          }
+                        ],
+                        "id": 42187,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "889:10:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "796f75206e6565642061206372616674696e672068616d6d657220746f20636f6e7374727563742074686973206275696c64696e67",
+                        "id": 42188,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "901:55:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_b0c72e2b66432562bd59db1ff0fd80e9c4b634fc9e411290c1f236f2292ddbb7",
+                          "typeString": "literal_string \"you need a crafting hammer to construct this building\""
+                        },
+                        "value": "you need a crafting hammer to construct this building"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_b0c72e2b66432562bd59db1ff0fd80e9c4b634fc9e411290c1f236f2292ddbb7",
+                          "typeString": "literal_string \"you need a crafting hammer to construct this building\""
+                        }
+                      ],
+                      "id": 42183,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "881:7:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 42189,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "881:76:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 42190,
+                  "nodeType": "ExpressionStatement",
+                  "src": "881:76:54"
+                },
+                {
+                  "assignments": [
+                    42192
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 42192,
+                      "mutability": "mutable",
+                      "name": "newBalance",
+                      "nameLocation": "975:10:54",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 42219,
+                      "src": "968:17:54",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      },
+                      "typeName": {
+                        "id": 42191,
+                        "name": "uint64",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "968:6:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint64",
+                          "typeString": "uint64"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 42196,
+                  "initialValue": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    },
+                    "id": 42195,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 42193,
+                      "name": "balance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 42176,
+                      "src": "988:7:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "-",
+                    "rightExpression": {
+                      "hexValue": "31",
+                      "id": 42194,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "998:1:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "988:11:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "968:31:54"
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    },
+                    "id": 42199,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 42197,
+                      "name": "newBalance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 42192,
+                      "src": "1013:10:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "hexValue": "30",
+                      "id": 42198,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1027:1:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "1013:15:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 42217,
+                    "nodeType": "Block",
+                    "src": "1091:90:54",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 42211,
+                              "name": "bag",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 42172,
+                              "src": "1123:3:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes24",
+                                "typeString": "bytes24"
+                              }
+                            },
+                            {
+                              "id": 42212,
+                              "name": "slot",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 42174,
+                              "src": "1128:4:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint8",
+                                "typeString": "uint8"
+                              }
+                            },
+                            {
+                              "id": 42213,
+                              "name": "CRAFTING_HAMMER_ITEM_ID",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 42236,
+                              "src": "1134:23:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes24",
+                                "typeString": "bytes24"
+                              }
+                            },
+                            {
+                              "id": 42214,
+                              "name": "newBalance",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 42192,
+                              "src": "1159:10:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes24",
+                                "typeString": "bytes24"
+                              },
+                              {
+                                "typeIdentifier": "t_uint8",
+                                "typeString": "uint8"
+                              },
+                              {
+                                "typeIdentifier": "t_bytes24",
+                                "typeString": "bytes24"
+                              },
+                              {
+                                "typeIdentifier": "t_uint64",
+                                "typeString": "uint64"
+                              }
+                            ],
+                            "expression": {
+                              "id": 42208,
+                              "name": "state",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 42166,
+                              "src": "1105:5:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_State_$5784",
+                                "typeString": "contract State"
+                              }
+                            },
+                            "id": 42210,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1111:11:54",
+                            "memberName": "setItemSlot",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 68360,
+                            "src": "1105:17:54",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_State_$5784_$_t_bytes24_$_t_uint8_$_t_bytes24_$_t_uint64_$returns$__$attached_to$_t_contract$_State_$5784_$",
+                              "typeString": "function (contract State,bytes24,uint8,bytes24,uint64)"
+                            }
+                          },
+                          "id": 42215,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1105:65:54",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 42216,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1105:65:54"
+                      }
+                    ]
+                  },
+                  "id": 42218,
+                  "nodeType": "IfStatement",
+                  "src": "1009:172:54",
+                  "trueBody": {
+                    "id": 42207,
+                    "nodeType": "Block",
+                    "src": "1030:55:54",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 42203,
+                              "name": "bag",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 42172,
+                              "src": "1064:3:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes24",
+                                "typeString": "bytes24"
+                              }
+                            },
+                            {
+                              "id": 42204,
+                              "name": "slot",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 42174,
+                              "src": "1069:4:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint8",
+                                "typeString": "uint8"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes24",
+                                "typeString": "bytes24"
+                              },
+                              {
+                                "typeIdentifier": "t_uint8",
+                                "typeString": "uint8"
+                              }
+                            ],
+                            "expression": {
+                              "id": 42200,
+                              "name": "state",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 42166,
+                              "src": "1044:5:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_State_$5784",
+                                "typeString": "contract State"
+                              }
+                            },
+                            "id": 42202,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1050:13:54",
+                            "memberName": "clearItemSlot",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 68380,
+                            "src": "1044:19:54",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_State_$5784_$_t_bytes24_$_t_uint8_$returns$__$attached_to$_t_contract$_State_$5784_$",
+                              "typeString": "function (contract State,bytes24,uint8)"
+                            }
+                          },
+                          "id": 42205,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1044:30:54",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 42206,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1044:30:54"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "baseFunctions": [
+              38821
+            ],
+            "functionSelector": "f03ad92f",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "construct",
+            "nameLocation": "602:9:54",
+            "overrides": {
+              "id": 42162,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "716:8:54"
+            },
+            "parameters": {
+              "id": 42161,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42154,
+                  "mutability": "mutable",
+                  "name": "ds",
+                  "nameLocation": "617:2:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42220,
+                  "src": "612:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Game_$4792",
+                    "typeString": "contract Game"
+                  },
+                  "typeName": {
+                    "id": 42153,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 42152,
+                      "name": "Game",
+                      "nameLocations": [
+                        "612:4:54"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 4792,
+                      "src": "612:4:54"
+                    },
+                    "referencedDeclaration": 4792,
+                    "src": "612:4:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Game_$4792",
+                      "typeString": "contract Game"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 42156,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42220,
+                  "src": "621:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes24",
+                    "typeString": "bytes24"
+                  },
+                  "typeName": {
+                    "id": 42155,
+                    "name": "bytes24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "621:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes24",
+                      "typeString": "bytes24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 42158,
+                  "mutability": "mutable",
+                  "name": "actor",
+                  "nameLocation": "659:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42220,
+                  "src": "651:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes24",
+                    "typeString": "bytes24"
+                  },
+                  "typeName": {
+                    "id": 42157,
+                    "name": "bytes24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "651:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes24",
+                      "typeString": "bytes24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 42160,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42220,
+                  "src": "666:12:54",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 42159,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "666:5:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "611:81:54"
+            },
+            "returnParameters": {
+              "id": 42163,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "729:0:54"
+            },
+            "scope": 42221,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 42122,
+              "name": "BuildingKind",
+              "nameLocations": [
+                "363:12:54"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38844,
+              "src": "363:12:54"
+            },
+            "id": 42123,
+            "nodeType": "InheritanceSpecifier",
+            "src": "363:12:54"
+          }
+        ],
+        "canonicalName": "BasicFactory",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          42221,
+          38844,
+          38793
+        ],
+        "name": "BasicFactory",
+        "nameLocation": "347:12:54",
+        "scope": 42222,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 54
+}

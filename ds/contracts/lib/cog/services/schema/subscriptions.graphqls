@@ -1,0 +1,16 @@
+interface Event {
+	id: ID!
+}
+
+type BlockEvent implements Event {
+	id: ID!
+	block: Int!
+	sigs: [String!]!
+	simulated: Boolean!
+}
+
+type Subscription {
+	events(gameID: ID!, simulated: Boolean): Event!
+	transaction(gameID: ID!, owner: String): ActionTransaction!
+	session(gameID: ID!, owner: String): Session!
+}
