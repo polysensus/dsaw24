@@ -28,14 +28,11 @@ contract Demo1Test is Test {
     address tawDeployer;
     address accountDeployer;
 
-    // going to set this up for sportsbeard zone 3
-    address lightPlayer = address(0x402462EefC217bf2cf4E6814395E1b61EA4c43F7);
+    address lightPlayer = address(0xb675fb3256d475611C33827b2CFD6b04e9550775);
     address lightPlayerAccountAddress;
     ERC6551Account lightPlayerAccount;
 
-    address lightPlayer2 = address(0xb675fb3256d475611C33827b2CFD6b04e9550775);
-
-    // 
+    address lightPlayer2 = address(0x402462EefC217bf2cf4E6814395E1b61EA4c43F7);
 
     address darkPlayer = address(0x8fe19020100e15F7cBa5ACA32454FeCAD4F1aFE3);
     // this is me @robin0f7
@@ -49,7 +46,7 @@ contract Demo1Test is Test {
 
     string RPC = vm.rpcUrl("garnet");
     uint256 expectChainId = 17069;
-    uint256 FORK_BLOCK = vm.envOr("FORK_BLOCK", uint256(587129));
+    uint256 FORK_BLOCK = vm.envOr("FORK_BLOCK", uint256(604068));
 
     // vm.envOr("6551_REGISTRY_ADDRESS", address(0));
     address EIP6551_REGISTRY = address(0x000000006551c19487814612e58FE06813775758);
@@ -64,7 +61,6 @@ contract Demo1Test is Test {
         tawDeployer = vm.addr(1);
         accountDeployer = vm.addr(2);
         eve = vm.addr(13);
-
 
         // The deployer of the implementation can be anything we like
         vm.prank(accountDeployer, accountDeployer);
@@ -102,8 +98,6 @@ contract Demo1Test is Test {
 
         console.log("lightPlayerAccount", lightPlayerAccountAddress);
         console.log("darkPlayerAccount", darkPlayerAccountAddress);
-
-
     }
 
     function test_expectedForkChainId() public {
@@ -343,7 +337,7 @@ contract Demo1Test is Test {
           lightPlayer, lightPlayer2, lightZoneTokenId);
 
         // show that the original player wallet can no longer pull on the rope
-        console.log("confirming authority changed");
+        console.log("confirming authority transfered");
 
         vm.expectRevert();
         lightPlayerAccount.execute(payable(address(taw)), 0, addCall, 0);

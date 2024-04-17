@@ -7,6 +7,6 @@ contract CounterScript is Script {
     function setUp() public {}
 
     function run() public {
-        vm.broadcast();
+        uint256 deployKey = vm.envUint("DEPLOY_KEY");
     }
 }
