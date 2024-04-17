@@ -1,1 +1,7 @@
+.env
 ds-contracts
+cache
+out
+*.sh
+*.log
+kipple
