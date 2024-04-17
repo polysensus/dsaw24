@@ -8,39 +8,8 @@ contract TugAWarTest is Test {
     TugAWar public tao;
 
     function setUp() public {
-        tao = new TugAWar();
+        tao = new TugAWar(address(0), address(0));
     }
 
-    function test_joinLight() public {
-      tao.joinTheLight();
-    }
-
-    function test_joinDark() public {
-      tao.joinTheDark();
-    }
-
-    function test_joinLightTwiceReverts() public {
-      tao.joinTheLight();
-      vm.expectRevert();
-      tao.joinTheLight();
-    }
-
-    function test_joinBothSidesRevertsLightDark() public {
-      tao.joinTheLight();
-      vm.expectRevert();
-      tao.joinTheDark();
-    }
-
-    function test_joinBothSidesRevertsDarkLight() public {
-      tao.joinTheDark();
-      vm.expectRevert();
-      tao.joinTheLight();
-    }
-
-    function test_joinDarkTwiceReverts() public {
-      tao.joinTheDark();
-      vm.expectRevert();
-      tao.joinTheDark();
-    }
-
+    // Moved to Demo1.fokr.t.sol
 }

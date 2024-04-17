@@ -13,6 +13,7 @@ import {SignatureChecker} from "@openzeppelin/contracts/utils/cryptography/Signa
 
 import {IERC6551Account} from "erc6551/interfaces/IERC6551Account.sol";
 import {IERC6551Executable} from "erc6551/interfaces/IERC6551Executable.sol";
+import {console2 as console } from "forge-std/console2.sol";
 
 contract ERC6551Account is
     IERC165,
@@ -127,6 +128,10 @@ contract ERC6551Account is
         address signer
     ) internal view virtual returns (bool) {
         (uint256 chainId, address tokenContract, uint256 tokenId) = token();
+
+        console.log(tokenId);
+        console.log("checking block");
+
         if (chainId != block.chainid) return false;
 
         if (
@@ -142,8 +147,10 @@ contract ERC6551Account is
             // feature or a very bad bug.
             return balance == 1;
         }
+        address tokenOwner = IERC721(tokenContract).ownerOf(tokenId);
+        console.log(signer, tokenOwner);
 
-        return signer == IERC721(tokenContract).ownerOf(tokenId);
+        return signer == tokenOwner;
     }
 
     /**

@@ -2,7 +2,7 @@
 src = "src"
 out = "out"
 libs = ["node_modules", "lib"]
-[profile.redtone]
-opsepolia = "${REDSTONE_RPC_URL}"
+[rpc_endpoints]
+garnet = "${GARNET_RPC_URL}"
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

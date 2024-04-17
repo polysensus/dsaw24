@@ -1,5 +1,5 @@
 @openzeppelin/=lib/openzeppelin-contracts/
-contracts/=contracts/
+src/=src/
 ds-test/=lib/contracts/lib/forge-std/lib/ds-test/src/
 forge-std/=lib/forge-std/src/
-erc6551/=lib/erc6551-reference/src/
+erc6551/=lib/erc6551/src/
