@@ -11,8 +11,8 @@ import {ERC1155Holder} from "@openzeppelin/contracts/token/ERC1155/utils/ERC1155
 
 import {SignatureChecker} from "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol";
 
-import {IERC6551Account} from "./interfaces/IERC6551Account.sol";
-import {IERC6551Executable} from "./interfaces/IERC6551Executable.sol";
+import {IERC6551Account} from "erc6551/interfaces/IERC6551Account.sol";
+import {IERC6551Executable} from "erc6551/interfaces/IERC6551Executable.sol";
 
 contract ERC6551Account is
     IERC165,
