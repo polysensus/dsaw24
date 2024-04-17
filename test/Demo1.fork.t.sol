@@ -10,6 +10,7 @@ import {IERC6551Registry} from "erc6551/interfaces/IERC6551Registry.sol";
 import {IERC6551Account} from "erc6551/interfaces/IERC6551Account.sol";
 import {IERC165} from "@openzeppelin/contracts/interfaces/IERC165.sol";
 import {IERC1155} from "@openzeppelin/contracts/interfaces/IERC1155.sol";
+import {IERC721} from "@openzeppelin/contracts/interfaces/IERC721.sol";
 
 import {GameResult, TugAWar} from "src/TugAWar.sol";
 
@@ -337,18 +338,12 @@ contract Demo1Test is Test {
         // NOTE: THIS TRANSFERS DOWNSTREAM ZONE OWNERSHIP
         // For the demo we will use metamask or command line thing
         // **********************************************
-        bytes memory transferCall = abi.encodeWithSignature(
-            "safeTransferFrom(address,address,uint256,uint256,bytes)",
-            address(lightPlayerAccount),
-            address(lightPlayer2) /* This is the wallet of the other player,
-            the player wallet can own as many zones as it likes, the TBA is bound to
-            exactly one. here we transfer the token and so the validSigner is
-            now the new wallet (lightPlayer2)*/,
-            lightZoneTokenId, 1, ""
-        );
-        lightPlayerAccount.execute(payable(address(DOWNSTREAM_ZONE)), 0, transferCall, 0);
+        IERC721 zoneToken = IERC721(DOWNSTREAM_ZONE);
+        zoneToken.safeTransferFrom(
+          lightPlayer, lightPlayer2, lightZoneTokenId);
 
         // show that the original player wallet can no longer pull on the rope
+        console.log("confirming authority changed");
 
         vm.expectRevert();
         lightPlayerAccount.execute(payable(address(taw)), 0, addCall, 0);
