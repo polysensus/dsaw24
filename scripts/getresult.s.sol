@@ -14,9 +14,9 @@ contract GetResultScript is Script {
         taw = TugAWar(TUGAWAR);
 
         // hard coded to the first result
-        GameResult memory r =  taw.getResult(1);
-        console.log("Game 1 winner", r.winner);
-        console.log("Game 1 finalLightHolder", r.finalLightPlayer);
-        console.log("Game 1 finalDarkHolder", r.finalDarkPlayer);
+        GameResult memory r =  taw.getResult(2);
+        console.log("Game 2 winner", r.winner);
+        console.log("Game 2 finalLightHolder", r.finalLightPlayer);
+        console.log("Game 2 finalDarkHolder", r.finalDarkPlayer);
     }
 }
