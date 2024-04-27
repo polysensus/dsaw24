@@ -1,6 +1,0 @@
-
-type ContractConfig {
-	name: String!
-	chainId: Int!
-	address: String!
-}

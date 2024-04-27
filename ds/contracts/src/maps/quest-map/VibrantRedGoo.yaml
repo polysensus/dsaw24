@@ -1,9 +1,0 @@
-kind: Item
-spec:
-  name: Vibrant Red Goo
-  icon: 22-197
-  goo:
-    red: 10
-    green: 0
-    blue: 0
-  stackable: true
