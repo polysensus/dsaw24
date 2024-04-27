@@ -34,8 +34,8 @@ contract DeployScript is Script {
 
         console.log("DEPLOYING ACCOUNT IMPLEMENTATION");
         accountImplementation = new ERC6551Account();
-        taw = new TugAWar(DOWNSTREAM_ZONE, address(accountImplementation));
         console.log(address(accountImplementation));
+        taw = new TugAWar(DOWNSTREAM_ZONE, address(accountImplementation));
 
         // We can just go ahead and counter factually deploy all the token
         // bound accounts. It just so happens the tokens had already been

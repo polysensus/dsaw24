@@ -7,7 +7,7 @@ import "forge-std/console2.sol";
 
 import {ERC6551Account} from "src/ERC6551Account.sol";
 
-import {DeployScript} from "scripts/Deploy.s.sol";
+import {DeployScript} from "scripts/Demo1.Deploy.s.sol";
 import {console} from "forge-std/Test.sol";
 
 // --- upstream contract imports

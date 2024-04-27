@@ -1,55 +1,145 @@
----
 version: '3'
 dotenv:
   - ".env"
   - ".env.secret"
 
 vars:
+  PROVIDER_ID: '{{.PROVIDER_ID | default "local"}}'
   PLUG_DIR:
     sh: "echo $(cd {{.PLUG_DIR}} && pwd)"
   DS_DIR:
     sh: "echo $(cd {{.DS_DIR}} && pwd)"
   DS:
     sh: "echo 'node $(cd {{.DS_DIR}} && pwd)/cli/dist/ds.js'"
-  # The default  here is the foundry mnemonic derived private key
-  DEPLOYER_KEY: "0x6335c92c05660f35b36148bbfb2105a68dd40275ebf16eff9524d487fb5d57a8"
-  # If pub is not provided, KEY must be
-  DEPLOYER_PUB: ""
-  RPC_URL: "http://localhost:8545"
-
-  PLAYER_KEY: "0x6335c92c05660f35b36148bbfb2105a68dd40275ebf16eff9524d487fb5d57a8"
-  PLAYER_PUB: ""
-
 tasks:
 
+  local-up:
+    desc: |
+      start up the local downstream development
+
+      CLI_ARGS passed to docker compose up. eg '-- --pull=always'
+
+    cmds:
+      - |
+        [[ "{{.PROVIDER_ID}}" != "local" ]] && echo "PROVIDER_ID must be 'local'" && exit 1
+        exit 0
+      # - cd {{.DS_DIR}} && docker compose up --pull=always
+      - cd {{.DS_DIR}} && docker compose up -- {{.CLI_ARGS}}
+      - task: deploy-deployment-proxy
+      - task: deploy-6551-reg
+
+  local-down:
+    cmds:
+      - cd {{.DS_DIR}} && docker compose down
+
+
+  deploy-account-impl:
+    desc: deply the account implementation for the token bound accounts
+    dotenv: [".env.{{.PROVIDER_ID}}"]
+    vars:
+      dryrun: '{{.dryrun | default false}}'
+    cmds:
+      - |
+
+        XARGS="--skip-simulation {{.CLI_ARGS}}"
+        ! {{.dryrun}} && XARGS="$XARGS --broadcast"
+
+        OUTLOG=deployed.account.implementation.log
+        forge script \
+          --rpc-url $RPC scripts/DeployAccountImpl.s.sol \
+          --silent --json $XARGS > $OUTLOG 2> /dev/null
+
+        ADDRESS=$(head -n 1 $OUTLOG  | jq -r .logs[0])
+        if {{.dryrun}}; then
+          echo ERC6551_ACCOUNT_IMLEMENTATION_ADDRESS=$ADDRESS
+          exit 0
+        fi
+
+        echo "export ERC6551_REGISTRY=0x000000006551c19487814612e58FE06813775758" \
+        > .env.{{.PROVIDER_ID}}.6551
+        echo "export ERC6551_ACCOUNT_IMLEMENTATION_ADDRESS=$ADDRESS" \
+        >> .env.{{.PROVIDER_ID}}.6551
+
+        cat .env.{{.PROVIDER_ID}}.6551
+
+  deploy-tbas:
+    dotenv: [".env.{{.PROVIDER_ID}}", ".env.{{.PROVIDER_ID}}.6551"]
+    vars:
+      first: '{{.first | default "0"}}'
+      n: '{{.n | default "3"}}'
+      salt: '{{.salt | default "ds.polysensus.com"}}'
+    cmds:
+      - |
+        export DS_ZONE_ADDR=$(task -s -d {{.ROOT_DIR}} ds-zone-addr)
+        export FIRST={{.first}}
+        export NUM_ACCOUNTS={{.n}}
+        export SALT={{.salt}}
+        echo "DS_ZONE_ADDR: $DS_ZONE_ADDR"
+        echo "FIRST:        $FIRST"
+        echo "NUM_ACCOUNTS: $NUM_ACCOUNTS"
+        echo "SALT:         $SALT"
+        forge script scripts/CreateZoneTBAs.s.sol {{.CLI_ARGS}}
+        
+
+  ds-zone-addr:
+    desc: get the zone contract address
+    dotenv: [".env.{{.PROVIDER_ID}}"]
+    cmds:
+      - |
+        GAME_ADDR=$(curl -s -X POST -H "Content-Type: application/json" \
+          -d'{"query": "{ games { addr: id } }"}' \
+          $DS_QUERY_URL | jq -r .data.games[0].addr)
+
+        ZONE_ADDR=$(cast call -r $RPC $GAME_ADDR 'zoneOwnership()')
+        echo ${ZONE_ADDR: -40}
+
+  ds-game-addr:
+    desc: run the graph  ql query to obtain the building kind contract addresses
+    dotenv: [".env.{{.PROVIDER_ID}}"]
+    cmds:
+      - |
+        curl -s -X POST -H "Content-Type: application/json" \
+          -d'{"query": "{ games { addr: id } }"}' \
+          $DS_QUERY_URL | jq -r .data.games[0].addr
+
   apply:
+    dotenv: [".env.{{.PROVIDER_ID}}"]
     cmds:
       - |
         cd {{.PLUG_DIR}}
-        node {{.DS_DIR}}/cli/dist/ds.js \
-          apply -z 1 -n local \
-          -k 0x6335c92c05660f35b36148bbfb2105a68dd40275ebf16eff9524d487fb5d57a8 -R -f .
+        ds apply -z $DS_ZONE -n $DS_NETWORK \
+          -k $ZONE_KEY -R -f .
 
-  zone-contract:
-    desc: "get the address of the Zone NFT contract"
+  fork-tests:
+    dotenv: [".env.{{.PROVIDER_ID}}", ".env.{{.PROVIDER_ID}}.6551"]
+    desc: |
+      run tests. runs forking tests and unit tests
+
+      To run a specific test use '-- --mt testMethod'. arguments after -- are passed
+      directly to foundry
+
     cmds:
       - |
-        DEPLOYER=$(node scripts/pub.js "{{.DEPLOYER_KEY}}")
-        node scripts/findcontract.js {{.RPC_URL}} $DEPLOYER "721"
+        export ENABLE_FORK_TESTS=true
 
-  contracts:deployed:
+        [[ -z "$FORK_BLOCK" ]] && FORK_BLOCK=$(cast bn -r $RPC)
+        echo "FORK_BLOCK: $FORK_BLOCK"
+        export FORK_BLOCK
+
+        export DS_ZONE_ADDR=$(task -s -d {{.ROOT_DIR}} ds-zone-addr)
+
+        FOUNDRY_PROFILE="{{.PROVIDER_ID}}" forge test -vvv {{.CLI_ARGS}}
+
+
+  ds-latest:
     desc: "exec into the contracts container and cat latest.json"
     cmds:
       - docker container exec -it ds-contracts-1 cat /contracts/out/latest.json
-  contracts:cp:
+
+  ds-contracts-cp:
     desc: "copy the contracts directory from the running container to {{.ROOT_DIR}}/ds/contracts"
     cmds:
       - docker cp ds-contracts-1:/contracts ds/
-
-
-  
-
-
 
   build:ds-cli:
     desc: "build ds cli"
@@ -59,4 +149,82 @@ tasks:
         pwd
         npm run build
 
+  ds-addrs:
+    desc: run the graph  ql query to obtain the building kind contract addresses
+    dotenv: [".env.{{.PROVIDER_ID}}"]
+    cmds:
+      - |
+        curl -X POST -H "Content-Type: application/json" \
+          -d'{"query": "{ games { addr: id state {addr: id} router {addr: id} dispatcher {addr: id} dispatcher {addr: id}} }"}' \
+          $DS_QUERY_URL
 
+  ds-plug-addrs:
+    desc: run the graph  ql query to obtain the building kind contract addresses
+    dotenv: [".env.{{.PROVIDER_ID}}"]
+    cmds:
+      - |
+        curl -X POST -H "Content-Type: application/json" \
+          -d'{"query": "{ games { state { buildingKinds: nodes(match: {kinds:\"BuildingKind\"}) { name: annotation(name: \"name\") { value } contract: nodes(match: {kinds: \"Extension\"}) { addr: key } } } } }"}' \
+          $DS_QUERY_URL
+
+
+  check-6551:
+    dotenv: [".env.{{.PROVIDER_ID}}"]
+    desc: |
+      check if the code for the deterministic deployer and the 6551 registry exists
+
+    cmds:
+      - |
+        echo "$DETERMINISTIC_DEPLOY >"
+        cast code \
+          -r $RPC \
+            $DETERMINISTIC_DEPLOY
+
+        echo "$ERC6551_REGISTRY >"
+        cast code \
+          -r $RPC \
+            $ERC6551_REGISTRY
+
+
+  deploy-deployment-proxy:
+    dotenv: [".env.{{.PROVIDER_ID}}"]
+    desc: |
+      deploy arachnid's deterministic deployment proxy
+
+    cmds:
+      - |
+        # https://github.com/Arachnid/deterministic-deployment-proxy
+      
+        # fund the well known signer address with plenty of eth from the last
+        # well known FOUNDRY test account
+
+        cast send -r $RPC --private-key $FUNDED_KEY --from $FUNDED_PUB \
+          --value 1ether $DETERMINISTIC_DEPLOY_DEPLOY_SIGNER_PUB
+
+        cast publish -r $RPC $DETERMINISTIC_DEPLOY_TX
+
+        cast code -r $RPC $DETERMINISTIC_DEPLOY
+
+
+  deploy-6551-reg:
+    dotenv: [".env.{{.PROVIDER_ID}}"]
+    desc: |
+      deploy the canonical 6551 registry
+
+      On many chains this is already deployed. For local testing in foundry it will need to be deployed.
+
+      This is one way to accomplish that.
+
+
+    cmds:
+      - |
+
+        # fund the deployer address, from the 10th well known anvil account
+        cast send -r $RPC --private-key $FUNDED_KEY \
+          --from $FUNDED_PUB --value 1ether $DEPLOY_PUB
+
+        TX=$(cast mktx -r $RPC --private-key $DEPLOY_KEY $DETERMINISTIC_DEPLOY $ERC6551_REGISTRY_DEPLOY_DATA)
+        echo $TX
+        cast publish -r $RPC $TX
+
+        cast code -r $RPC $ERC6551_REGISTRY
