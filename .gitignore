@@ -1,5 +1,8 @@
 broadcast
+node_modules
 .env
+.env.*
+ds
 ds-contracts
 cache
 out

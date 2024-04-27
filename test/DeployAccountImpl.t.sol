@@ -22,9 +22,6 @@ contract CreateZoneTokenBountAccountsScriptTest is Test {
 
       fork = vm.createFork(RPC, FORK_BLOCK);
       vm.selectFork(fork);
-      uint256 polyZoneKey = vm.envUint("POLYZONE_KEY");
-      uint256 dailyZoneKey = vm.envUint("DAILYZONE_KEY");
-      uint256 darkZoneKey = vm.envUint("DARKZONE_KEY");
   }
 
   function test_CreateZoneTokenBountAccountsScript() public {

@@ -51,8 +51,9 @@ contract CreateZoneTokenBountAccountsScript is Script {
     for (uint256 id=firstTokenId; id < firstTokenId + accountCount; id++) {
 
       address zoneAccountAddress = registry.createAccount(
-        address(accountImplementation), 0 /*deploymentSalt*/, block.chainid,
+        address(accountImplementation), deploymentSalt, block.chainid,
         DS_ZONE_ADDR, id);
+
       console.log("zoneAccount:", id, zoneAccountAddress);
     }
   }

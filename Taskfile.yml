@@ -1,4 +1,10 @@
 version: '3'
+
+# recipies
+# startup local dev for fork testing
+#  - task local-up
+#  - task deploy-contracts
+
 dotenv:
   - ".env"
   - ".env.secret"
@@ -24,14 +30,19 @@ tasks:
         [[ "{{.PROVIDER_ID}}" != "local" ]] && echo "PROVIDER_ID must be 'local'" && exit 1
         exit 0
       # - cd {{.DS_DIR}} && docker compose up --pull=always
-      - cd {{.DS_DIR}} && docker compose up -- {{.CLI_ARGS}}
-      - task: deploy-deployment-proxy
-      - task: deploy-6551-reg
+      # - cd {{.DS_DIR}} && docker compose up --wait {{.CLI_ARGS}}
+      - cd {{.DS_DIR}} && docker compose up {{.CLI_ARGS}}
 
   local-down:
     cmds:
       - cd {{.DS_DIR}} && docker compose down
 
+  deploy-contracts:
+    dotenv: [".env.{{.PROVIDER_ID}}"]
+    cmds:
+      - task: deploy-deployment-proxy
+      - task: deploy-6551-reg
+      - task: deploy-account-impl
 
   deploy-account-impl:
     desc: deply the account implementation for the token bound accounts
@@ -65,11 +76,17 @@ tasks:
   deploy-tbas:
     dotenv: [".env.{{.PROVIDER_ID}}", ".env.{{.PROVIDER_ID}}.6551"]
     vars:
-      first: '{{.first | default "0"}}'
+      first: '{{.first | default "1"}}'
       n: '{{.n | default "3"}}'
       salt: '{{.salt | default "ds.polysensus.com"}}'
+      dryrun: '{{.dryrun | default false}}'
+
     cmds:
       - |
+
+        XARGS="--skip-simulation {{.CLI_ARGS}}"
+        ! {{.dryrun}} && XARGS="$XARGS --broadcast"
+
         export DS_ZONE_ADDR=$(task -s -d {{.ROOT_DIR}} ds-zone-addr)
         export FIRST={{.first}}
         export NUM_ACCOUNTS={{.n}}
@@ -78,7 +95,7 @@ tasks:
         echo "FIRST:        $FIRST"
         echo "NUM_ACCOUNTS: $NUM_ACCOUNTS"
         echo "SALT:         $SALT"
-        forge script scripts/CreateZoneTBAs.s.sol {{.CLI_ARGS}}
+        forge script --fork-url $RPC $XARGS scripts/CreateZoneTBAs.s.sol
         
 
   ds-zone-addr:
